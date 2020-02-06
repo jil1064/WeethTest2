@@ -22,7 +22,7 @@
     {{#each friends}}
       <div class="friend">
           <img src="{{imageURL}}" class="img-responsive img-rounded">
-          <h3><a id="name" href="#">{{name}}</a></h3>
+          <h3><a class="name" href="#">{{name}}</a></h3>
           <p>{{description}}</p>
           <hr>
       </div>
@@ -45,13 +45,3 @@
     
 </body>
 </html>
-
-<script>
-
-    $('#name').click(function(e){
-        e.preventDefault();
-        temp = $(this).text();
-        $(this).html(anagrammedName(temp));
-    });
-
-</script>
