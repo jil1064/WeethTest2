@@ -1,0 +1,211 @@
+body {
+  background-color: white;
+}
+
+.topBackground {
+  position: absolute;
+  width: 100%;
+  height: 20vh;
+  left: 0px;
+  top: 0px;
+  background: #F1F1F1;
+}
+
+#back {
+    position: fixed;
+    top: 1.5vh;
+    left: 1.5vh;
+    width: 4vh;  
+    cursor: pointer;
+    z-index: 5;
+}
+
+/*
+#homeButton {
+    position: fixed;
+    top: 1.75vh;
+    right: 1.75vh;
+    width: 5vh;  
+    cursor: pointer;
+    z-index: 1;
+}
+*/
+
+#name{
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 1vh;
+  margin: 1.75vh 0 0 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4.5vh;
+/*  line-height: -8vh;*/
+  text-align: center;
+
+  color: #000000;
+}
+
+#eventDate{
+  position: absolute;
+  margin: 0 0 0 0;
+  width: 100%;
+  left: 0px;
+  top: 7.5vh;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.8vh;
+  line-height: 33px;
+  text-align: center;
+  color: #000000;
+}
+
+#eventName{
+  position: absolute;
+  width: 100%;
+  height: 9vh;
+  left: 0px;
+  top: 11.5vh;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.8vh;
+  line-height: 33px;
+  text-align: center;
+  color: #000000;
+}
+
+.receiveMsg{
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  padding: 5vh 5vh 5vh 5vh;
+  top: 25vh;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 28px;
+  color: #000000;
+}
+
+/*
+.writeMsgOne {
+  position: absolute;
+  width: 80%;
+  height: 76px;
+  left: 10%;
+  top: 35vh;
+  padding: 1vh 3vh 1vh 3vh;
+  color: #B0B0B0;
+  background: #F1F1F1;
+}
+
+.writeMsgTwo {
+  position: absolute;
+  width: 80%;
+  height: 76px;
+  left: 10%;
+  top: 50vh;
+  padding: 1vh 3vh 1vh 3vh;
+  color: #B0B0B0;
+  background: #F1F1F1;
+}
+
+.writeMsgThree {
+  position: absolute;
+  width: 80%;
+  height: 76px;
+  left: 10%;
+  top: 65vh;
+  padding: 1vh 3vh 1vh 3vh;
+  color: #B0B0B0;
+  background: #F1F1F1;
+}
+*/
+
+.receiveButton{
+  position: absolute;
+  top: 20vh;
+  width: 53%;
+  background-color: #F1F1F1 ;
+  border: 1px solid #B0B0B0;
+  color: #B0B0B0;
+  padding: .8vh 0;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.writeButton{
+  position: absolute;
+  top: 20vh;
+  width: 50%;
+  background-color: #F1F1F1 ;
+  border: 1px solid #B0B0B0;
+  color: #B0B0B0;
+  padding: .8vh 0;
+  text-align: center;
+  right: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.activate {
+  background-color: #B0B0B0;
+  border: 1px solid #B0B0B0;
+  color: #000000;
+}
+
+#sendButton {
+  position: absolute;
+  bottom: 4vh;
+  width: 100%;
+  background-color: #B0B0B0;
+  border: 1px solid #B0B0B0;
+  color: #000000;
+  padding: 2vh 20%;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+#writeDiv {
+    display: block;
+    position: absolute;
+    top: 30vh;
+    left: 8vw;
+    width: 84%;
+    height: 70vh;
+    font-size: 14px;
+}
+
+textarea {
+    position: relative;
+    margin-top: 2vh;
+    border: none;
+    padding: 0.5vh 1vh;
+    color: #B0B0B0;
+    background: #F1F1F1;
+    width: 100%;
+    resize: none;
+    height: 27px;
+    color: black;
+}
+
+textarea:focus {
+    height: 68px;
+}

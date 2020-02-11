@@ -1,0 +1,45 @@
+{
+  "friends": [
+    {
+      "name": "Christina",
+      "imgURL": "",
+      "activities": [
+        {
+          "title": "Chilling",
+          "location": "Sun God Lounge",
+          "date": "February 20, 2020"
+        }
+      ]
+    },
+    {
+      "name": "David",
+      "imgURL": "",
+      "activities": [
+        {
+          "title": "Lunch",
+          "location": "Pokeland",
+          "date": "February 5, 2020"
+        }
+      ]
+    },
+    {
+      "name": "Jianan",
+      "imgURL": "",
+      "activities": [
+        {
+          "title": "Bowling",
+          "location": "Superbowl",
+          "date": "January 1, 2020"
+        }
+      ]
+    },
+    {
+      "name": "John Doe",
+      "imgURL": ""
+    },
+    {
+      "name": "Amy",
+      "imgURL": ""
+    }
+  ]
+}

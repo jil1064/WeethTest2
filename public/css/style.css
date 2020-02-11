@@ -1,0 +1,269 @@
+/*@media (max-width: 480px) {*/
+    body {
+        font-family: 'Roboto';
+        text-align: center;
+    }
+
+    .bar {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 9vh;
+        background: #f1f1f1;
+        text-align: center;
+        z-index: 900;
+    }
+
+    #navBar {
+        top: 0;
+    }
+
+    #profileHome {
+        position: fixed;
+        top: 0.75vh;
+        right: 0.75vh;
+        width: 7vh;
+        cursor: pointer;
+    }
+
+    #back {
+        position: fixed;
+        top: 1.5vh;
+        left: 1.5vh;
+        width: 4vh;
+        cursor: pointer;
+    }
+
+    #homeButton {
+        position: fixed;
+        top: 1.75vh;
+        right: 1.75vh;
+        width: 5vh;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    #botBar {
+        bottom: 0;
+        overflow: visible;
+    }
+
+    #noti {
+        position: fixed;
+        bottom: 2vh;
+        left: 17vw;
+        width: 5vh;
+        cursor: pointer;
+    }
+
+    #friends {
+        position: fixed;
+        bottom: 2vh;
+        right: 17vw;
+        width: 5vh;
+        cursor: pointer;
+    }
+
+    #createEve {
+        bottom: 0;
+        border-radius: 50%;
+        background: darkgrey;
+        width: 13vh;
+        height: 13vh;
+        margin-top: -1.5vh;
+        border: none;
+        color: white;
+        font-size: 9vh;
+    }
+
+    #timeline {
+        position: absolute;
+        left: 17vw;
+        top: 9vh;
+        width: 75vw;
+        height: auto;
+        border-left: 1px solid black;
+        margin-top: 5vh;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .event {
+        margin-bottom: 4.5vh;
+    }
+
+    .month {
+        margin-left: -13vw;
+        margin-bottom: -7vw;
+        font-weight: bold;
+    }
+
+    .eventDot {
+        border-radius: 50%;
+        background: black;
+        width: 3vw;
+        height: 3vw;
+        margin-left: -1.7vw;
+        margin-top: -1.7vw;
+    }
+
+    .eventDate {
+        margin-left: 5vw;
+        margin-top: -5vw;
+    }
+
+    .eventCard {
+        margin-left: 5vw;
+        margin-top: 0vw;
+        background: #e5e5e5;
+        padding: 1vh;
+    }
+
+    .loginLabel{
+      padding: 1vh 0 1vh 0;
+      bottom: 2vh;
+      text-align: left;
+      margin-right: 60vw;
+    }
+
+    .appTitle{
+      padding: 0 0 0 0;
+      font-size: 10vh;
+    }
+
+    #username{
+      background: white;
+      border: 1px solid #E0E0E0;
+      padding: 1.5vh 25vh 2vh 2vh;
+      text-align: left;
+      font-size: 2vh;
+      margin-top: 1vh;
+      width: 80vw;
+      background-color: #E0E0E0;
+    }
+
+    #password {
+      background: white;
+      border: 1px solid #E0E0E0;
+      padding: 1.5vh 25vh 2vh 2vh;
+      text-align: left;
+      font-size: 2vh;
+      margin-top: 1vh;
+      width: 80vw;
+      background-color: #E0E0E0;
+    }
+
+    #loginButton {
+      left: 10%;
+      right: 10%;
+      bottom: 10%;
+      position: absolute;
+      width: 80vw;
+      background-color: #B0B0B0;
+      border: 1px solid #B0B0B0;
+      color: #000000;
+      padding: 2vh 20%;
+      text-align: center;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+
+    .createForm {
+        position: absolute;
+        left: 10%;
+        width: 80%;
+        top: 15%;
+        height: 80%;
+    }
+
+    #autofill {
+        margin-bottom: -5vh;
+        border: 1px solid lightgrey;
+        height: auto;
+        color: lightgray;
+        text-align: left;
+        padding: 1vh;
+        display: none;
+        overflow: scroll;
+    }
+
+    #createFriend:focus + #autofill {
+        display: block;
+     }
+
+    #createFinish {
+      position: absolute;
+      width: 100%;
+      bottom: 6vh;
+      background-color: #B0B0B0;
+      border: 1px solid #B0B0B0;
+      color: #000000;
+      padding: 1.5vh 0;
+    }
+
+    .createForm input {
+        width: 100%;
+        padding: 1vh;
+    }
+
+.allNotis {
+    position: absolute;
+    left: 8vw;
+    top: 9vh;
+    width: 84vw;
+    height: auto;
+}
+
+.notiCard {
+    display: block;
+    position: relative;
+    margin-left: 5vw;
+    margin-bottom: 4vh;
+    width: 72vw;
+    height: 19vh;
+    padding: 3vw 6vw;
+    background: #f1f1f1;
+    text-align: left;
+}
+
+.notiUser {
+    position: absolute;
+    left: 5%;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+}
+
+.notiContent {
+    position: absolute;
+    left: 23vw;
+    margin-top: 0vw;
+    font-weight: bold;
+}
+
+.notiAction1 {
+    position: absolute;
+    width: auto;
+    bottom: 3vh;
+    left: 4vw;
+    padding: .5vw 2.5vw;
+    border: 1px solid gray;
+    border-radius: 6vw;
+}
+
+.notiAction2 {
+    position: absolute;
+    bottom: 3vh;
+    right: 4vw;
+    padding: .5vw 2.5vw;
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 6vw;
+}
+
+/*}*/

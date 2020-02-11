@@ -1,0 +1,41 @@
+<!doctype>
+
+<html>
+
+<head>
+    <title>Weeth</title>
+    <link rel="icon" href="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div id="navBar" class="bar">
+        <p style="margin-top: 1.75vh; font-size: 4.5vh;">Weeth</p>
+        <img id="profileHome" onclick="window.location.href='/profile'" src="../img/profile.png">
+    </div>
+
+    <div id="botBar" class="bar fixed-nav-bar">
+        <button id="createEve" onclick="window.location.href='create'">+</button>
+        <img id="noti" onclick="window.location.href='/notification'" src="../img/noti.png">
+        <img id="friends" onclick="window.location.href='/friends'" src="../img/friends.png">
+    </div>
+
+    <div id="timeline">
+        {{#each events}}
+        <div class="event" onclick="window.location.href='#'">
+            <div class="month">{{month}}</div>
+            <div class="eventDot"></div>
+            <div class="eventDate">{{date}}</div>
+            <div class="eventCard">{{title}} at {{location}}<br>weeth {{weeth}}</div>
+        </div>
+        {{/each}}
+    </div>
+
+</body>
+
+</html>

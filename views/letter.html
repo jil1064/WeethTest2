@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> Weeth: Letter Screen </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!---IMPORT BOOTSTRAP 4-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!---IMPORT JavaScript -->
+<!--
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+-->
+  <script src="js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+  <!-- CSS STYLESHEET -->
+  <link rel="stylesheet" href="css/letter.css">
+</head>
+
+<body>
+  <div class="topBackground">
+    <img id="back" onclick="goBack()" src="img/back.png">
+    <div class="col-md">
+        <h1 id="name">Christina Do</h1>
+      <h2 id="eventDate">1/28/2020</h2>
+        <h2 id="eventName">Lunch @ Poke</h2>
+    </div>
+  </div>
+
+  <div>
+    <div class="receiveButton activate" onclick="receiveClick()">Receive</div>
+    <div class="writeButton" onclick="writeClick()">Write</div>
+  </div>
+
+  <div id="receiveDiv">
+    <p class="receiveMsg">Wait for this user to write back!</p>
+  </div>
+    
+  <div id="writeDiv" style="display: none;">
+      <p style="margin: 0;">Choose one or more!</p>
+      <textarea class="writeMsgOne inputWrite" placeholder="Thank you for..."></textarea>
+      <textarea class="writeMsgTwo inputWrite" placeholder="I just learned that you..."></textarea>
+      <textarea class="writeMsgThree inputWrite" placeholder="I wish I could’ve had... (for you)"></textarea>
+      <textarea class="writeMsgFour inputWrite" placeholder="Anything else..."></textarea>
+      <div id="sendButton">SEND</div>
+  </div>
+
+    
+
+  <!--- Java Script ---->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

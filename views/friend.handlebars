@@ -1,0 +1,31 @@
+<!DOCTYPE >
+<html>
+
+<head>
+  <title>Weeth</title>
+  <link rel="icon" href="" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  <script src="../js/script.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navBar" class="bar">
+    <p style="margin-top: 1.75vh; font-size: 4.5vh;">{{name}}</p>
+    <img id="back" onclick="goBack()" src="../img/back.png" />
+    <a href="/home">
+      <img id="homeButton" src="../img/homeButton.png" text-align="center" />
+    </a>
+  </div>
+  <br /><br /><br /><br /><br />
+
+  {{#each activities}}
+  <a href="#">{{date}}<br />{{title}}<br />at {{location}}</a>
+  <br /><br />
+  {{/each}}
+</body>
+
+</html>

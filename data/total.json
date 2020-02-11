@@ -1,0 +1,25 @@
+{
+  "events": [
+    {
+      "title": "Chilling",
+      "date": "2020-02-20",
+      "weeth": "Christina",
+      "location": "Sun God Lounge",
+      "month": "MONTH"
+    },
+    {
+      "title": "Lunch",
+      "date": "2020-02-05",
+      "weeth": "David",
+      "location": "Pokeland",
+      "month": "MONTH"
+    },
+    {
+      "title": "Bowling",
+      "date": "2020-01-01",
+      "weeth": "Jianan",
+      "location": "Superbowl",
+      "month": "MONTH"
+    }
+  ]
+}
