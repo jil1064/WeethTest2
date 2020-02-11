@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/jquery.min.js"></script>
     <script src="../js/script.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
@@ -20,14 +21,14 @@
     </div>
     <br><br><br><br><br>
     <div>
-      <button id="addFriend">Add Friend</button>
-      <br><br><br>
+        <button id="addFriend">Add Friend</button>
+        <br><br><br>
     </div>
 
     {{#each friends}}
     <div class="friendDiv" onclick="window.location.href = '/friends/{{name}}';">
-      <img class="friendPhoto" src="img/friendProfile.png">
-      <a class="friendText">{{name}}</a>
+        <img class="friendPhoto" src="img/friendProfile.png">
+        <a class="friendText">{{name}}</a>
     </div>
     {{/each}}
 </body>

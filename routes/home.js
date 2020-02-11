@@ -1,30 +1,24 @@
-var total = require("../data/total.json");
-var friends = require("../data/friends");
-
+var total_events = require("../data/total.json");
 exports.view = function(req, res) {
-  console.log(req.query);
-  var new_event = {
-    title: req.query.title,
-    date: req.query.date,
-    weeth: req.query.weeth,
-    location: req.query.location,
-    month: "MONTH"
-  };
+  if (req.query.weeth) {
+    var new_activity = {
+      title: req.query.title,
+      location: req.query.location,
+      date: req.query.date,
+      weeth: req.query.weeth
+    };
 
-  var new_activity = {
-    title: req.query.title,
-    location: req.query.location,
-    date: req.param.date
-  };
+    console.log(new_activity);
 
-  var friends_arr = friends.friends;
-  var friend = req.query.weeth;
-  for (var i = 0; i < friends_arr.length; i++) {
-    if (friends_arr[i] === friend) {
-      friends_arr[i].activities.push(new_activity);
-    }
+    addEvent(new_activity);
   }
 
-  total.events.push(new_event);
-  res.render("home", total);
+  total_events.events.sort((a, b) => {
+    return Date.parse(b.date) - Date.parse(a.date);
+  });
+  res.render("home", total_events);
 };
+
+function addEvent(activity) {
+  total_events.events.push(activity);
+}
