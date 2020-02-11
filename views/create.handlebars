@@ -22,14 +22,20 @@
 
     <form class="createForm" role="form" method="get" action="/home">
         <input type="text" id="createFriend" placeholder="Weeth Who?" name="weeth">
-        <div id="autofill">(autofill)</div>
+        <div id="autofill">
+            {{#each friends}}
+            <ul>
+                <li class="exist-friends">{{name}}</li>
+            </ul>
+            {{/each}}
+        </div>
         <br><br>
         <input type="text" id="createTitle" placeholder="Event Title" name="title"><br><br>
         <input type="text" id="createPlace" placeholder="Event Location" name="location"><br><br>
         <input id="createDate" placeholder="Event Date" type="date" name="date"><br><br>
         <br><br><br>
         <input type="submit" id="createFinish" onclick="buttonFeed('#createFinish', 'Have Fun!')" value="Create">
-        <p style="opacity: 0; font-size: 30vh;">s</p>
+        <p style="opacity: 0; font-size: 30vh;">~</p>
     </form>
 
 </body>

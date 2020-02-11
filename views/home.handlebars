@@ -10,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
 </head>
 
 <body>
@@ -28,15 +30,35 @@
     <div id="timeline">
         {{#each events}}
         <div class="event" onclick="window.location.href='#'">
-            <div class="month">month</div>
-            {{!-- <div class="eventDot"></div> --}}
-            <div class="eventDot" style="margin-top: 30px"></div>
+            <div class="month">{{month}}</div>
+            <div class="eventDot"></div>
+<!--            <div class="eventDot" style="margin-top: 30px"></div>-->
             <div class="eventDate">{{date}}</div>
             <div class="eventCard">{{title}} at {{location}}<br>weeth {{weeth}}</div>
         </div>
         {{/each}}
+        <br><br><br><br>
     </div>
 
 </body>
 
 </html>
+
+
+<script>
+
+    $(document).ready(function() {
+        initializePage();
+        
+        var temp = "";
+        $('.month').each(function(i, obj) {
+            if ( $(this).html() == temp ){
+                $(this).css("opacity", "0");
+                }
+            temp = $(this).html();
+        });
+    
+    });
+
+
+</script>

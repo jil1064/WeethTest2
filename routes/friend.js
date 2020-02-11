@@ -13,12 +13,12 @@ exports.list = function(req, res) {
     }
   }
 
+  // if found the friend, push all activities of friends
+  // into a new array to be rendered
   if (found) {
     var activites = total_events.events.filter(
       event => event.weeth === found.name
     );
-    console.log(activites);
-
     found.activities = [];
     found.activities.push(...activites);
   }
