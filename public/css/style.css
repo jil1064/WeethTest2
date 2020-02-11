@@ -327,6 +327,13 @@
     .createForm input {
         width: 100%;
         padding: 1vh;
+        border: 1px solid #E0E0E0;
+/*      padding: 1.5vh 25vh 2vh 2vh;*/
+      text-align: left;
+      font-size: 3vh;
+      margin-top: 1vh;
+      width: 80vw;
+      background-color: #E0E0E0;
     }
 
 .allNotis {
