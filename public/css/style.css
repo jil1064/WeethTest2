@@ -143,6 +143,7 @@
     }
 
     #password {
+      outline: none;
       background: white;
       border: 1px solid #E0E0E0;
       padding: 1.5vh 25vh 2vh 2vh;
@@ -156,7 +157,7 @@
     #loginButton {
       left: 10%;
       right: 10%;
-      bottom: 10%;
+      bottom: 20%;
       position: absolute;
       width: 80vw;
       background-color: #B0B0B0;
@@ -171,6 +172,124 @@
       font-size: 1em;
       box-sizing: border-box;
     }
+
+    #userPhoto{
+      width: 30vw;
+      text-align: center;
+      padding: 3vh 35% 3vh 35% ;
+      border-radius: 50%;
+    }
+
+    .profileName{
+      margin-top: -1.5vh;
+      font-size: 2.5vh;
+    }
+
+    .profileText{
+      padding: 1.75vh 45vw 1.75vh 9vw ;
+      width: 90%;
+      font-size: 2vh;
+      text-align: left;
+      outline: none;
+      color: black;
+      margin-bottom: 3vh;
+      background: #F1F1F1;
+      border: none;
+    }
+
+    .profileFill{
+      float: left;
+      margin-left: 6vw;
+    }
+
+    #confirm {
+      padding: 2vh 0 2vh 0;
+      width: 85%;
+      height: 6vh;
+      border: none;
+      outline: none;
+      font: 'Roboto';
+      background-color: #B0B0B0;
+      color: black;
+      font-size: 2vh;
+      text-decoration: none;
+    }
+
+    .input-icons i {
+        position: absolute;
+    }
+
+    .input-icons {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .icon {
+        padding: 10px;
+        color: #181818;
+        min-width: 50px;
+        text-align: left;
+    }
+
+    .editIcon {
+      left: auto;
+      right: -3vw;
+    }
+
+    .input-field {
+        display: inline-block;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    #signOut {
+      padding: 2vh 0 2vh 0;
+      width: 85%;
+      height: 6vh;
+      border: none;
+      outline: none;
+      background-color: #B0B0B0;
+      color: black;
+      font-size: 2vh;
+      font: 'Roboto';
+      text-decoration: none;
+    }
+
+    #addFriend {
+      padding: 1.5vh 20vw 1.5vh 20vw;
+      font-size: 3vh;
+      font: 'Roboto';
+      outline: none;
+      border:none;
+      background-color: #E5E5E5;
+      color: black;
+      text-decoration: none;
+    }
+
+    .friendPhoto {
+      padding: 2vw 2vw 2vw 6vw;
+    }
+
+    .friendText {
+      font-family:'Roboto';
+      font-size: 3.8vh;
+      font-weight: 100;
+      text-align: right;
+      color: black;
+      text-decoration:none;
+      padding: 3vh 2vw 3vh 4vw;
+    }
+
+    .friendDiv{
+      width: 100%;
+      text-align: left;
+      display: inline-flex;
+      overflow: hidden;
+      padding-bottom: 3vh;
+    }
+
 
     .createForm {
         position: absolute;

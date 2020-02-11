@@ -19,10 +19,16 @@
         <img id="back" onclick="goBack()" src="../img/back.png">
     </div>
     <br><br><br><br><br>
+    <div>
+      <button id="addFriend">Add Friend</button>
+      <br><br><br>
+    </div>
 
     {{#each friends}}
-    <a href="/friends/{{name}}">{{name}}</a>
-    <br><br>
+    <div class="friendDiv" onclick="window.location.href = 'onefriend.html';">
+      <img class="friendPhoto" src="img/friendProfile.png">
+      <a class="friendText" href="/friends/{{name}}">{{name}}</a>
+    </div>
     {{/each}}
 </body>
 

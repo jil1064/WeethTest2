@@ -10,15 +10,50 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="../js/script.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet"
+          href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+      <div id="navBar" class="bar">
+          <p style="margin-top: 1.75vh; font-size: 4.5vh;">Profile</p>
+          <img id="back" onclick="goBack()" src="img/back.png">
+      </div>
+      <br><br><br><br>
 
-    <div id="navBar" class="bar">
-        <p style="margin-top: 1.75vh; font-size: 4.5vh;">Profile</p>
-        <img id="back" onclick="goBack()" src="../img/back.png">
-    </div>
+      <img id="userPhoto" src="https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg" draggable="false">
+      <p class="profileName">Alex Doe</p>
+      <br>
 
+      <form>
+        <div display="block" class="input-icons">
+          <label for="username" class="profileFill">Username</label><br>
+          <i class="fa fa-user icon"></i>
+          <i class="fa fa-pencil icon editIcon"></i>
+          <input class="profileText" type="text" placeholder="Alex Doe"></input>
+
+        </div>
+
+        <div display="block" class="input-icons">
+          <label for="email" class="profileFill">Email</label><br>
+          <i class="fa fa-envelope icon"></i>
+          <i class="fa fa-pencil icon editIcon"></i>
+          <input class="profileText" type="text" placeholder="alex_doe@gmail.com"></input>
+
+        </div>
+
+        <div display="block" class="input-icons">
+          <label for="password" class="profileFill">Edit Password</label><br>
+          <i class="fa fa-key icon"> </i>
+          <i class="fa fa-pencil icon editIcon"></i>
+          <input class="profileText" type="text" placeholder="**********"></input>
+
+        </div>
+      </form>
+      <button id="confirm">Save Changes</button>
+      <br><br>
+
+      <button id="signOut" onclick="window.location.href='index.html';">SIGN OUT</button>
 </body>
 
 </html>
