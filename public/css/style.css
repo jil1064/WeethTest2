@@ -315,13 +315,11 @@
      }
 
     #createFinish {
-      position: absolute;
-      width: 100%;
-      bottom: 6vh;
       background-color: #B0B0B0;
       border: 1px solid #B0B0B0;
       color: #000000;
       padding: 1.5vh 0;
+      text-align: center;
     }
 
     .createForm input {
