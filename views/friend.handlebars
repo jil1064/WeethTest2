@@ -20,19 +20,18 @@
       <img id="homeButton" src="../img/homeButton.png" text-align="center" />
     </a>
   </div>
-  
+
   <div id="timeline">
         {{#each activities}}
         <div class="event" onclick="window.location.href='#'">
 <!--            <div class="month">{{month}}</div>-->
             <div class="month">Feb</div>
-            <div class="eventDot"></div>
+            <div class="eventDot" style="margin-top: 30px"></div>
             <div class="eventDate">{{date}}</div>
             <div class="eventCard">{{title}} at {{location}}</div>
         </div>
         {{/each}}
     </div>
-    
 </body>
 
 </html>
