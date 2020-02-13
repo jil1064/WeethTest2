@@ -22,20 +22,21 @@
   </div>
 
   {{#if activities}}
-  <div id="timeline">
-    {{#each activities}}
-    <div class="event" onclick="window.location.href='/letter'">
-      <div class="month">{{month}}</div>
-      <div class="eventDot"></div>
-      <div class="eventDate">{{date}}</div>
-      <div class="eventCard">{{title}} at {{location}}</div>
-    </div>
-    {{/each}}
-  </div>
+      <div id="timeline">
+          <br>
+        {{#each activities}}
+        <div class="event" onclick="window.location.href='/letter'">
+          <div class="month">{{month}}</div>
+          <div class="eventDot"></div>
+          <div class="eventDate">{{date}}</div>
+          <div class="eventCard">{{title}} at {{location}}</div>
+        </div>
+        {{/each}}
+      </div>
   {{else}}
-  <div>
-    <h1 style="margin-top: 200px">You and {{name}} have no activities together yet...</h1>
-  </div>
+      <div>
+        <h1 style="margin-top: 200px">You and {{name}} have no activities together yet...</h1>
+      </div>
   {{/if}}
 
 </body>

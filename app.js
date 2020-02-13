@@ -15,6 +15,7 @@ var create = require("./routes/create");
 var notification = require("./routes/notification");
 var profile = require("./routes/profile");
 var friend = require("./routes/friend");
+var letter = require("./routes/letter");
 
 var app = express();
 
@@ -46,6 +47,7 @@ app.get("/friends/:friend", friend.list);
 app.get("/create", create.createEvent);
 app.get("/notification", notification.list);
 app.get("/profile", profile.view);
+app.get("/letter", letter.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
