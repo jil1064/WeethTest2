@@ -8,8 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <script src="../js/jquery.min.js"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
 
@@ -20,15 +21,26 @@
         <img id="back" onclick="goBack()" src="../img/back.png">
     </div>
     <br><br><br><br><br>
-    <div>
-        <button id="addFriend">Add Friend</button>
-        <br><br><br>
+    <div class="addFriendDiv">
+      <button id="addFriend" onclick="addFriendClick()">Add Friend</button>
+      <br><br>
     </div>
+    <p class="friendLabel">Your Friends</p>
+
+    {{#each possibleFriends}}
+    <div class="hiddenFriend" style="display: none;">
+      <img class="friendPhoto" src="img/friendProfile.png">
+      <a class="friendText">{{name}}</a>
+      <a class="addFriendButton">
+        <img class="addIcon" src="img/addFriendBefore.svg">
+      </a>
+    </div>
+    {{/each}}
 
     {{#each friends}}
     <div class="friendDiv" onclick="window.location.href = '/friends/{{name}}';">
-        <img class="friendPhoto" src="img/friendProfile.png">
-        <a class="friendText">{{name}}</a>
+      <img class="friendPhoto" src="img/friendProfile.png">
+      <a class="friendText">{{name}}</a>
     </div>
     {{/each}}
 </body>

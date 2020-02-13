@@ -2,15 +2,36 @@
   "friends": [
     {
       "name": "Christina",
-      "imgURL": ""
+      "imgURL": "",
+      "activities": [
+        {
+          "title": "Chilling",
+          "location": "Sun God Lounge",
+          "date": "February 20, 2020"
+        }
+      ]
     },
     {
       "name": "David",
-      "imgURL": ""
+      "imgURL": "",
+      "activities": [
+        {
+          "title": "Lunch",
+          "location": "Pokeland",
+          "date": "February 5, 2020"
+        }
+      ]
     },
     {
       "name": "Jianan",
-      "imgURL": ""
+      "imgURL": "",
+      "activities": [
+        {
+          "title": "Bowling",
+          "location": "Superbowl",
+          "date": "January 1, 2020"
+        }
+      ]
     },
     {
       "name": "John Doe",
@@ -18,6 +39,144 @@
     },
     {
       "name": "Amy",
+      "imgURL": ""
+    }
+  ],
+  "possibleFriends": [
+    {
+      "name": "Adam",
+      "imgURL": ""
+    },
+    {
+      "name": "Aaron",
+      "imgURL": ""
+    },
+    {
+      "name": "Bob",
+      "imgURL": ""
+    },
+    {
+      "name": "Barbara",
+      "imgURL": ""
+    },
+    {
+      "name": "Cameron",
+      "imgURL": ""
+    },
+    {
+      "name": "Cody",
+      "imgURL": ""
+    },
+    {
+      "name": "David",
+      "imgURL": ""
+    },
+    {
+      "name": "Daniel",
+      "imgURL": ""
+    },
+    {
+      "name": "Ethan",
+      "imgURL": ""
+    },
+    {
+      "name": "Earl",
+      "imgURL": ""
+    },
+    {
+      "name": "Finn",
+      "imgURL": ""
+    },
+    {
+      "name": "Felix",
+      "imgURL": ""
+    },
+    {
+      "name": "Fabian",
+      "imgURL": ""
+    },
+    {
+      "name": "Gavin",
+      "imgURL": ""
+    },
+    {
+      "name": "George",
+      "imgURL": ""
+    },
+    {
+      "name": "Giovanna",
+      "imgURL": ""
+    },
+    {
+      "name": "Harry",
+      "imgURL": ""
+    },
+    {
+      "name": "Hugo",
+      "imgURL": ""
+    },
+    {
+      "name": "Isabelle",
+      "imgURL": ""
+    },
+    {
+      "name": "Iris",
+      "imgURL": ""
+    },
+    {
+      "name": "Ivy",
+      "imgURL": ""
+    },
+    {
+      "name": "Jacob",
+      "imgURL": ""
+    },
+    {
+      "name": "Joseph",
+      "imgURL": ""
+    },
+    {
+      "name": "Justin",
+      "imgURL": ""
+    },
+    {
+      "name": "Kaitlin",
+      "imgURL": ""
+    },
+    {
+      "name": "Kate",
+      "imgURL": ""
+    },
+    {
+      "name": "Karen",
+      "imgURL": ""
+    },
+    {
+      "name": "Luke",
+      "imgURL": ""
+    },
+    {
+      "name": "Lucas",
+      "imgURL": ""
+    },
+    {
+      "name": "Liam",
+      "imgURL": ""
+    },
+    {
+      "name": "Leo",
+      "imgURL": ""
+    },
+    {
+      "name": "Mason",
+      "imgURL": ""
+    },
+    {
+      "name": "Mia",
+      "imgURL": ""
+    },
+    {
+      "name": "Madison",
       "imgURL": ""
     }
   ]
