@@ -20,8 +20,8 @@ exports.list = function(req, res) {
       return event.weeth === found.name;
     });
 
-    found.activities = [];
-    found.activities.push(...activites);
+    found.activities = activites;
+    // found.activities.push(...activites);
   }
   res.render("friend", found);
 };
