@@ -2,36 +2,15 @@
   "friends": [
     {
       "name": "Christina",
-      "imgURL": "",
-      "activities": [
-        {
-          "title": "Chilling",
-          "location": "Sun God Lounge",
-          "date": "2020-02-20"
-        }
-      ]
+      "imgURL": ""
     },
     {
       "name": "David",
-      "imgURL": "",
-      "activities": [
-        {
-          "title": "Lunch",
-          "location": "Pokeland",
-          "date": "2020-02-05"
-        }
-      ]
+      "imgURL": ""
     },
     {
       "name": "Jianan",
-      "imgURL": "",
-      "activities": [
-        {
-          "title": "Bowling",
-          "location": "Superbowl",
-          "date": "2020-01-01"
-        }
-      ]
+      "imgURL": ""
     },
     {
       "name": "John Doe",
