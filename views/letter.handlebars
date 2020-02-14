@@ -16,6 +16,7 @@
   integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 -->
   <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
   integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
@@ -52,13 +53,11 @@
       <textarea class="writeMsgTwo inputWrite" placeholder="I just learned that you..."></textarea>
       <textarea class="writeMsgThree inputWrite" placeholder="I wish I could’ve had... (for you)"></textarea>
       <textarea class="writeMsgFour inputWrite" placeholder="Anything else..."></textarea>
-      <div id="sendButton">SEND</div>
+      <div id="sendButton" onclick="buttonFeed('#sendButton', 'Already sent!')">SEND</div>
   </div>
 
     
 
-  <!--- Java Script ---->
-  <script src="js/script.js"></script>
 </body>
 
 </html>
