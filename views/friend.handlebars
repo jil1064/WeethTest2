@@ -15,15 +15,21 @@
 <body>
   <div id="navBar" class="bar">
     <p style="margin-top: 1.75vh; font-size: 4.5vh;">{{name}}</p>
-    <img id="back" onclick="goBack()" src="../img/back.png" />
-    <a href="/home">
+    <!--        <img id="back" onclick="goBack()" src="../img/back.png">-->
+        <a href="/home">
       <img id="homeButton" src="../img/homeButton.png" text-align="center" />
     </a>
-  </div>
+    </div>
+    
+    <div id="botBar" class="bar fixed-nav-bar">
+        <button id="createEve" onclick="window.location.href='create'">+</button>
+        <img id="noti" onclick="window.location.href='/notification'" src="../img/noti.png">
+        <img id="friends" onclick="window.location.href='/friends'" src="../img/friends.png">
+    </div>
 
   {{#if activities}}
+    <br>
       <div id="timeline">
-          <br>
         {{#each activities}}
         <div class="event" onclick="window.location.href='/letter'">
           <div class="month">{{month}}</div>
@@ -35,7 +41,7 @@
       </div>
   {{else}}
       <div>
-        <h1 style="margin-top: 200px">You and {{name}} have no activities together yet...</h1>
+        <h2 style="margin-top: 200px">You and {{name}} have no activities together yet...</h2>
       </div>
   {{/if}}
 
