@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> Weeth: Letter Screen </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!---IMPORT JavaScript -->
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/script.js"></script>
+    
+  <!---IMPORT BOOTSTRAP 4-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+  <!-- CSS STYLESHEET -->
+  <link rel="stylesheet" href="../css/letter.css">
+</head>
+
+<body>
+  <div class="topBackground">
+    <img id="back" onclick="goBack()" src="../img/back.png">
+    <img id="deleteButton" src="../img/delete.png" data-toggle="modal" data-target="#deleteModal">
+    <div class="col-md">
+      <h1 id="name">Jianan</h1>
+      <h2 id="eventDate">2020-01-01</h2>
+      <h2 id="eventName">Bowling at Superbowl</h2>
+    </div>
+  </div>
+    
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Are you sure to delete the event?</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="goBack()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+  <div>
+    <div class="receiveButton activate" onclick="receiveClick()">Receive</div>
+    <div class="writeButton" onclick="writeClick()">Write</div>
+  </div>
+
+  <div id="receiveDiv">
+    <p class="receiveMsg">Thank you for inviting me out! It surprised me that you were so good at bowling... I also love your jokes about bowwwwling lol (although I didn't quite get it at the moment, my thinking is slow). You were worried if I was disappointed due to my poor bowling skill, but I was actually very happy! Thank you again!</p>
+  </div>
+
+  <div id="writeDiv" style="display: none;">
+    <p>Thank you for coming! Sorry if my jokes were weird and bowling might not be something of your interest... But you always smiled and that's very cute! I wish that you pick a place where we can hangout next time :P</p>
+  </div>
+
+
+
+</body>
+
+</html>

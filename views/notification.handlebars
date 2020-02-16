@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/jquery.min.js"></script>
     <script src="../js/script.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
@@ -29,17 +30,25 @@
     </div>
     
     <div style="margin-top: 13vh;">
+<!--
         <div class="notiCard">
             <img class="notiUser" src="https://loremflickr.com/260/260">
             <p class="notiContent">Christy Ha<br><span style="font-weight: 100;">sent a friend request</span></p>
             <a class="notiAction1">reject</a>
             <a class="notiAction2">accept</a>
         </div>
+-->
+        {{#if alreadyRead}}
+        <p style="font-size: 2.7vh;">Past Notifications</p>
+        {{else}}
+        <p style="font-size: 2.7vh;">New Notification</p>
+        {{/if}}
+        
         <div class="notiCard">
             <img class="notiUser" src="https://loremflickr.com/260/260">
-            <p class="notiContent">David Gallardo<br><span style="font-weight: 100;">wrote to you</span></p>
-            <a class="notiAction1">Remind me</a>
-            <a class="notiAction2">Yay!!!</a>
+            <p class="notiContent">Jianan<br><span style="font-weight: 100;">wrote to you for "Bowling at Superbowl"</span></p>
+<!--            <a class="notiAction1">Remind me</a>-->
+            <a class="notiAction2" onclick="window.location.href = '/fakeletter';">View</a>
         </div>
     </div>
 
