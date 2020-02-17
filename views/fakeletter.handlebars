@@ -27,7 +27,7 @@
 
 <body>
   <div class="topBackground">
-    <img id="back" onclick="goBack()" src="../img/back.png">
+    <img id="back" onclick="window.location.href='/notification'" src="../img/back.png">
     <img id="deleteButton" src="../img/delete.png" data-toggle="modal" data-target="#deleteModal">
     <div class="col-md">
       <h1 id="name">Jianan</h1>
@@ -44,7 +44,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="goBack()">Delete</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="window.location.href='/notification'">Delete</button>
       </div>
     </div>
   </div>
