@@ -22,6 +22,7 @@ function initializePage() {
   $(".receiveButton").click(receiveClick);
   $(".writeButton").click(writeClick);
   $(".addFriendButton").click(addFriendIcon);
+  // $(".notiAction2").click(changeNotifStatus);
 }
 
 function goBack() {
@@ -106,3 +107,9 @@ function addFriendIcon(){
       console.log(p);
     }
 }
+
+// function changeNotifStatus(){
+//   console.log("clicked");  
+//   $("#pastNotif").css("display","inline");
+//   $("#newNotif").css("display","none");
+// }
