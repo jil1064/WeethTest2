@@ -119,12 +119,11 @@
         padding: 1vh;
     }
 
-    .loginLabel{
+    .loginLabel {
       padding: 1vh 0 1vh 0;
       bottom: 2vh;
       text-align: left;
       margin-left: 2%;
-      display: inline-block;
       float: left;
     }
 
@@ -166,22 +165,17 @@
     }
 
     #loginButton {
-      left: 10%;
-      right: 10%;
-      bottom: 20%;
-      position: absolute;
-      width: 80vw;
+      border-radius: 50px;
       background-color: #B0B0B0;
-      border: 1px solid #B0B0B0;
       color: #000000;
       padding: 2vh 20%;
       text-align: center;
       font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
+      font-weight: bolder;
       text-decoration: none;
       font-size: 1em;
-      box-sizing: border-box;
+      display: inline-flex;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
     }
 
 
@@ -228,7 +222,7 @@
     border-radius: 50%;
   }
 
-  .profileName{
+  #profileName{
     margin-top: -1.5vh;
     font-size: 2.5vh;
   }
