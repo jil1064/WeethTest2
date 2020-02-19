@@ -8,6 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  <script src="../js/jquery.min.js"></script>
   <script src="../js/script.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
 </head>
@@ -16,33 +17,33 @@
   <div id="navBar" class="bar">
     <p style="margin-top: 1.75vh; font-size: 4.5vh;">{{name}}</p>
     <!--        <img id="back" onclick="goBack()" src="../img/back.png">-->
-        <a href="/home">
+    <a href="/home">
       <img id="homeButton" src="../img/homeButton.png" text-align="center" />
     </a>
-    </div>
-    
-    <div id="botBar" class="bar fixed-nav-bar">
-        <button id="createEve" onclick="window.location.href='create'">+</button>
-        <img id="noti" onclick="window.location.href='/notification'" src="../img/noti.png">
-        <img id="friends" onclick="window.location.href='/friends'" src="../img/friends.png">
-    </div>
+  </div>
+
+  <div id="botBar" class="bar fixed-nav-bar">
+    <button id="createEve" onclick="window.location.href='/create'">+</button>
+    <img id="noti" onclick="window.location.href='/notification'" src="../img/noti.png">
+    <img id="friends" onclick="window.location.href='/friends'" src="../img/friends.png">
+  </div>
 
   {{#if activities}}
-    <br>
-      <div id="timeline">
-        {{#each activities}}
-        <div class="event" onclick="window.location.href='/letter'">
-          <div class="month">{{month}}</div>
-          <div class="eventDot"></div>
-          <div class="eventDate">{{date}}</div>
-          <div class="eventCard">{{title}} at {{location}}</div>
-        </div>
-        {{/each}}
-      </div>
+  <br>
+  <div id="timeline">
+    {{#each activities}}
+    <div class="event" onclick="window.location.href='/letter/{{id}}'">
+      <div class="month">{{month}}</div>
+      <div class="eventDot"></div>
+      <div class="eventDate">{{date}}</div>
+      <div class="eventCard">{{title}} at {{location}}</div>
+    </div>
+    {{/each}}
+  </div>
   {{else}}
-      <div>
-        <h2 style="margin-top: 200px">You and {{name}} have no activities together yet...</h2>
-      </div>
+  <div>
+    <h2 style="margin-top: 200px">You and {{name}} have no activities together yet...</h2>
+  </div>
   {{/if}}
 
 </body>

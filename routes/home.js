@@ -34,12 +34,15 @@ exports.view = function(req, res) {
 
     var name = capitalize(req.query.weeth);
 
+    var count = total_events.events.length;
     var new_activity = {
+      id: count,
       title: req.query.title,
       location: req.query.location,
       date: req.query.date,
       weeth: name,
-      month: strMonth
+      month: strMonth,
+      messages: []
     };
 
     addEvent(new_activity);

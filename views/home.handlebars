@@ -10,13 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <script src="../js/facebookHome.js"></script>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/script.js"></script>
 </head>
 
 <body>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
 
     <div id="navBar" class="bar">
         <p style="margin-top: 1.75vh; font-size: 4.5vh;">Weeth</p>
@@ -31,7 +29,7 @@
 
     <div id="timeline">
         {{#each events}}
-        <div class="event" onclick="window.location.href='/letter'">
+        <div class="event" onclick="window.location.href='/letter/{{id}}'">
             <div class="month">{{month}}</div>
             <div class="eventDot"></div>
             <div class="eventDate">{{date}}</div>
@@ -48,17 +46,17 @@
 
 <script>
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         initializePage();
-        
+
         var temp = "";
-        $('.month').each(function(i, obj) {
-            if ( $(this).html() == temp ){
+        $('.month').each(function (i, obj) {
+            if ($(this).html() == temp) {
                 $(this).css("opacity", "0");
-                }
+            }
             temp = $(this).html();
         });
-    
+
     });
 
 
