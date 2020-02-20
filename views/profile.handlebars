@@ -17,15 +17,15 @@
 
 <body>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
-  
+
   <div id="navBar" class="bar">
     <p style="margin-top: 1.75vh; font-size: 4.5vh;">Profile</p>
     <img id="back" onclick="goBack()" src="img/back.png">
   </div>
   <br><br><br><br>
 
-  <img id="userPhoto" src="../img/profile.png" draggable="false">
-  <p id="profileName">Alex Doe</p>
+  <img id="userPhoto" src="{{user.userPhoto}}" draggable="false">
+  <p id="profileName">{{user.name}}</p>
   <br>
 
   <form>
@@ -33,25 +33,25 @@
       <label for="username" class="profileFill">Username</label><br>
       <i class="fa fa-user icon"></i>
       <i class="fa fa-pencil icon editIcon"></i>
-      <input id="profileNameTwo" class="profileText" type="text" placeholder="Alex Doe"></input>
+      <input id="profileNameTwo" class="profileText" onClick="this.select();" type="text" value="{{user.name}}"></input>
     </div>
 
     <div display="block" class="input-icons">
       <label for="email" class="profileFill">Email</label><br>
       <i class="fa fa-envelope icon"></i>
       <i class="fa fa-pencil icon editIcon"></i>
-      <input id="profileEmail" class="profileText" type="text" placeholder="alex_doe@gmail.com"></input>
+      <input id="profileEmail" class="profileText" onClick="this.select();" type="text" value="{{user.email}}"></input>
     </div>
 
     <div display="block" class="input-icons">
       <label for="password" class="profileFill">Edit Password</label><br>
       <i class="fa fa-key icon"> </i>
       <i class="fa fa-pencil icon editIcon"></i>
-      <input class="profileText" type="text" placeholder="**********"></input>
-
+      <input id="profilePassword" class="profileText" onClick="this.select();" type="password" value="{{user.password}}"></input>
     </div>
   </form>
-  <button id="confirm">Save Changes</button>
+
+  <button id="saveChanges">Save Changes</button>
   <br><br>
 
   <button id="signOut" onclick="window.location.href='/';">SIGN OUT</button>

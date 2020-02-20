@@ -39,7 +39,7 @@ function statusChangeCallback(response) {
             scope: "email",
             return_scopes: true
         });
-        
+
     }
 }
 
@@ -57,8 +57,8 @@ function checkProfile(response){
     //console.log(response);
     $("#profileName").text(response.name);
     $("#userPhoto").attr("src", response.picture.data.url);
-    $("#profileNameTwo").attr("placeholder",response.name);
-    $("#profileEmail").attr("placeholder",response.email);
+    $("#profileNameTwo").attr("value",response.name);
+    $("#profileEmail").attr("value",response.email);
 
     // console.log("Name: "+response.name);
     // console.log("First Name: "+response.first_name);

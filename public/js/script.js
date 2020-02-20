@@ -25,6 +25,7 @@ function initializePage() {
   $(".writeButton").click(writeClick);
   $(".addFriendButton").click(addFriendIcon);
   $(".existFriend").click(chooseFriend);
+  $("#saveChanges").click(saveChanges);
 }
 
 function goBack() {
@@ -145,6 +146,20 @@ function deleteEvent() {
         url: '/letter/delete/' + id,
         method: 'DELETE',
         data: { id: id }
-        }); 
+        });
     window.location.href='/home';
+}
+
+function saveChanges(){
+  var profileImg = document.getElementById("userPhoto").src;
+  var profileName = document.getElementById("profileNameTwo").value;
+  var email = document.getElementById("profileEmail").value;
+  var password = document.getElementById("profilePassword").value;
+
+  document.getElementById("profileName").innerHTML = profileName;
+  document.getElementById("saveChanges").innerHTML = "Changes were saved!";
+  // console.log(profileImg);
+  // console.log(profileName);
+  // console.log(email);
+  // console.log(password);
 }
