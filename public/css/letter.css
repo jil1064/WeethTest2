@@ -91,41 +91,6 @@ body {
   color: #000000;
 }
 
-/*
-.writeMsgOne {
-  position: absolute;
-  width: 80%;
-  height: 76px;
-  left: 10%;
-  top: 35vh;
-  padding: 1vh 3vh 1vh 3vh;
-  color: #B0B0B0;
-  background: #F1F1F1;
-}
-
-.writeMsgTwo {
-  position: absolute;
-  width: 80%;
-  height: 76px;
-  left: 10%;
-  top: 50vh;
-  padding: 1vh 3vh 1vh 3vh;
-  color: #B0B0B0;
-  background: #F1F1F1;
-}
-
-.writeMsgThree {
-  position: absolute;
-  width: 80%;
-  height: 76px;
-  left: 10%;
-  top: 65vh;
-  padding: 1vh 3vh 1vh 3vh;
-  color: #B0B0B0;
-  background: #F1F1F1;
-}
-*/
-
 .receiveButton{
   position: absolute;
   top: 20vh;
@@ -169,6 +134,7 @@ body {
 
 #sendButton {
   position: absolute;
+  left: 0vw;
   bottom: 5vh;
   width: 100%;
   background-color: #B0B0B0;
@@ -194,7 +160,18 @@ body {
     font-family: Roboto;
 }
 
-textarea {
+#writeDivfake {
+    display: block;
+    position: absolute;
+    top: 30.5vh;
+    left: 8vw;
+    width: 84%;
+    height: 70vh;
+    font-size: 2.7vh;
+    font-family: Roboto;
+}
+
+input {
     position: relative;
     margin-top: 2vh;
     border: none;
@@ -207,9 +184,11 @@ textarea {
     color: black;
 }
 
-textarea:focus {
+/*
+input:focus {
     height: 15vh;
 }
+*/
 
 #deleteButton {
     position: fixed;
