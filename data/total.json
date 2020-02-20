@@ -7,7 +7,8 @@
       "weeth": "Christina",
       "location": "Sun God Lounge",
       "month": "Feb",
-      "messages": []
+      "messages": [],
+      "receive": []
     },
     {
       "id": 1,
@@ -16,7 +17,8 @@
       "weeth": "David",
       "location": "Pokeland",
       "month": "Feb",
-      "messages": []
+      "messages": [],
+      "receive": ["Thank you for inviting me out! It surprised me that you were so good at coding... You were worried if I was disappointed while crying and coding for COGS 120 project, but I was actually very happy, even my tears knew that! Thank you again!"]
     },
     {
       "id": 2,
@@ -25,7 +27,18 @@
       "weeth": "Jianan",
       "location": "Superbowl",
       "month": "Jan",
-      "messages": []
+      "messages": [],
+      "receive": "Thank you for inviting me out! It surprised me that you were so good at bowling... I also love your jokes about bowwwwling lol (although I didn't quite get it at the moment, my thinking is slow). You were worried if I was disappointed due to my poor bowling skill, but I was actually very happy! Thank you again!"
+    },
+      {
+      "id": 3,
+      "title": "Bowling Again",
+      "date": "2020-02-23",
+      "weeth": "Jianan",
+      "location": "Superbowl",
+      "month": "Feb",
+      "messages": [],
+      "receive": "Thank you for inviting me out! It surprised me that you were so good at bowling... I also love your jokes about bowwwwling lol (although I didn't quite get it at the moment, my thinking is slow). You were worried if I was disappointed due to my poor bowling skill, but I was actually very happy! Thank you again!"
     }
   ]
 }
