@@ -44,7 +44,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Delete</button>
+          <button type="button" class="btn btn-primary" onclick="deleteEvent()">Delete</button>
         </div>
       </div>
     </div>
@@ -52,29 +52,37 @@
 
 
   <div>
-    <div class="receiveButton activate" onclick="receiveClick()">Receive</div>
-    <div class="writeButton" onclick="writeClick()">Write</div>
+    <div class="receiveButton" onclick="receiveClick()">Receive</div>
+    <div class="writeButton activate" onclick="writeClick()">Write</div>
   </div>
 
-  <div id="receiveDiv">
-    <p class="receiveMsg">Wait for this user to write back!</p>
+  <div id="receiveDiv" style="display: none;">
+    {{#if hasReceived}}
+        <p class="receiveMsg">{{receive}}</p>
+    {{else}}
+        <p class="receiveMsg">Waiting for this user to write back!</p>
+    {{/if}}  
   </div>
 
-  <div id="writeDiv" style="display: none;">
-    {{#each messages}}
-    <p>{{this}}</p>
-    <br />
-    {{/each}}
-    <form role="form" method="post" action="/letter/{{id}}">
+  <div id="writeDiv">
+    {{#if hasWritten}}
+        {{#each messages}}
+        <p>{{this}}</p>
+<!--        <br />-->
+        {{/each}}
+    {{else}}
+<!--    <form role="form" method="post" action="/letter/{{id}}">-->
+    <form role="form" method="post">
       <p style="margin: 0;">Choose one or more!</p>
-      <input type="text" class="writeMsgOne inputWrite" placeholder="Thank you for..." name="thankyou"></input>
-      <input type="text" class="writeMsgTwo inputWrite" placeholder="I just learned that you..." name="learn"></input>
-      <input type="text" class="writeMsgThree inputWrite" placeholder="I wish I could’ve had... (for you)" name="wish"></input>
-      <input type="text" class="writeMsgFour inputWrite" placeholder="Anything else..." name="anything"></input>
+      <input type="text" class="writeMsgOne inputWrite" placeholder="Thank you for..." name="thankyou">
+      <input type="text" class="writeMsgTwo inputWrite" placeholder="I just learned that you..." name="learn">
+      <input type="text" class="writeMsgThree inputWrite" placeholder="I wish I could’ve had... (for you)" name="wish">
+      <input type="text" class="writeMsgFour inputWrite" placeholder="Anything else..." name="anything">
       <input type="submit" id="sendButton" value="Send">
     </form>
+    {{/if}}
   </div>
-  </div>
+
 
 
 
