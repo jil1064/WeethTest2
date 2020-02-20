@@ -8,6 +8,7 @@ function receiveClick(){
     $('.writeButton').removeClass('activate');
     $('#receiveDiv').fadeIn();
     $('#writeDiv').fadeOut();
+    $('#writeDivfake').fadeOut();
 }
 
 function writeClick(e){
@@ -16,6 +17,7 @@ function writeClick(e){
     $('.receiveButton').removeClass('activate');
     $('#receiveDiv').fadeOut();
     $('#writeDiv').fadeIn();
+    $('#writeDivfake').fadeIn();
 }
 
 function initializePage() {
