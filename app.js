@@ -53,6 +53,7 @@ app.get("/fakeletter", fakeletter.view);
 app.get("/signup", signup.view);
 app.get("/letter/:event_id", letter.view);
 app.post("/letter/:event_id", letter.submitForm);
+app.delete("/letter/delete/:event_id", letter.delete);
 
 http.createServer(app).listen(app.get("port"), function() {
   console.log("Express server listening on port " + app.get("port"));

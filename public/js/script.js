@@ -137,3 +137,14 @@ function chooseFriend(){
   var input = document.getElementById("createFriend")
   input.value = name;
 }
+
+function deleteEvent() {
+    var url = $(location).attr('href');
+    var id = url.charAt( url.length - 1 );
+    $.ajax({
+        url: '/letter/delete/' + id,
+        method: 'DELETE',
+        data: { id: id }
+        }); 
+    window.location.href='/home';
+}

@@ -61,6 +61,18 @@ function addMessage(eventId, newMessage) {
 }
 
 exports.delete = function(req, res) {
-    total_events.events = total_events.events.filter(function (elem) { return elem.id !== req.params.event_id; });
-    console.log(total_events.events);
+    var eventId = req.params.event_id;
+    total_events.events = total_events.events.filter(function (elem) {
+        return parseInt(elem.id) !== parseInt(eventId); });
 }
+
+//exports.delete('/letter/delete/:id', (req, res) => {
+//    Todo.deleteOne({ _id: req.params.id });
+//    console.log("here");
+////    .then(() => {
+////        res.json({ success: true });
+////    })
+////    .catch(err => {
+////        res.status.json({ err: err });
+////    });
+//});
