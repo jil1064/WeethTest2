@@ -28,8 +28,10 @@ exports.view = function(req, res) {
       strMonth = "Oct";
     } else if (strMonth == "11") {
       strMonth = "Nov";
-    } else {
+    } else if (strMonth == "12") {
       strMonth = "Dec";
+    } else {
+      strMonth = "???";
     }
 
     var name = capitalize(req.query.weeth);
