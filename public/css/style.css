@@ -64,17 +64,166 @@
         cursor: pointer;
     }
 
-    #createEve {
+    @media only screen and (min-width: 320px) {
+      #createEve {
         bottom: 0;
         border-radius: 50%;
         background: darkgrey;
-        width: 13vh;
-        height: 13vh;
-        margin-top: -1.5vh;
+        width: 20%;
+        height: auto;
+        margin-top: -2vh;
         border: none;
         color: white;
         font-size: 9vh;
+      }
+
+      .friendPhoto {
+        padding: 0 0 0 6vw;
+        width: 10vh;
+        height: 7vh;
+      }
     }
+
+    @media only screen and (min-width: 375px) {
+      #createEve {
+        bottom: 0;
+        border-radius: 50%;
+        background: darkgrey;
+        width: 20%;
+        height: auto;
+        margin-top: -2vh;
+        border: none;
+        color: white;
+        font-size: 9vh;
+      }
+
+      .friendPhoto {
+        padding: 0 0 0 6vw;
+        width: 10vh;
+        height: 7vh;
+      }
+    }
+
+
+    @media only screen and (min-width: 411px) and (min-height: 823px){
+      #createEve {
+        bottom: 0;
+        border-radius: 50%;
+        background: darkgrey;
+        width: 22%;
+        height: auto;
+        margin-top: -2vh;
+        border: none;
+        color: white;
+        font-size: 9vh;
+      }
+
+      .friendPhoto {
+        padding: 0 0 0 6vw;
+        width: 10vh;
+        height: 7vh;
+      }
+    }
+
+    /* iPhone X Screen */
+    @media only screen and (min-width: 375px) and (min-height: 812px){
+      #createEve {
+          bottom: 0;
+          border-radius: 50%;
+          background: darkgrey;
+          width: 24%;
+          height: auto;
+          margin-top: -2vh;
+          border: none;
+          color: white;
+          font-size: 9vh;
+      }
+
+      .friendPhoto {
+        padding: 0 0 0 6vw;
+        width: 10vh;
+        height: 7vh;
+      }
+    }
+
+    @media only screen and (min-width: 414px){
+      #createEve {
+        bottom: 0;
+        border-radius: 50%;
+        background: darkgrey;
+        width: 20%;
+        margin-top: -2vh;
+        height: auto;
+        border: none;
+        color: white;
+        font-size: 9vh;
+      }
+      .friendPhoto {
+        padding: 0 0 0 6vw;
+        width: 10vh;
+        height: 7vh;
+      }
+    }
+
+    /* iPhone 6/7/8 Plus */
+    @media only screen and (min-width: 425px) {
+      #createEve {
+        bottom: 0;
+        border-radius: 50%;
+        background: darkgrey;
+        width: 20%;
+        margin-top: -2vh;
+        height: auto;
+        border: none;
+        color: white;
+        font-size: 9vh;
+      }
+      .friendPhoto {
+        padding: 0 0 0 6vw;
+        width: 10vh;
+        height: 7vh;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      #createEve {
+        bottom: 0;
+        border-radius: 50%;
+        background: darkgrey;
+        width: 14%;
+        margin-top: -1.5vh;
+        height: auto;
+        border: none;
+        color: white;
+        font-size: 9vh;
+      }
+
+      .friendPhoto {
+        padding: 0 0 0 6vw;
+        width: 14vh;
+        height: 7vh;
+      }
+    }
+
+    @media only screen and (min-width: 425px){
+      .friendPhoto {
+        padding: 0 0 0 6vw;
+        width: 11vh;
+        height: 7vh;
+      }
+    }
+/* 
+    #createEve {
+      bottom: 0;
+      border-radius: 50%;
+      background: darkgrey;
+      width: 20%;
+      height: auto;
+      margin-top: -2vh;
+      border: none;
+      color: white;
+      font-size: 9vh;
+    } */
 
     #timeline {
         position: absolute;
@@ -311,12 +460,11 @@
     text-decoration: none;
   }
 
-  .friendPhoto {
+  /* .friendPhoto {
     padding: 0 0 0 6vw;
-    height: auto;
     width: 10vh;
     height: 7vh;
-  }
+  } */
 
   .friendText {
     font-family: 'Roboto';
