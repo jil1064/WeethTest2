@@ -2,7 +2,16 @@ var total_events = require("../data/total.json");
 
 exports.view = function(req, res) {
   var event = findEvent(req.params.event_id);
-
+    if (event.receive.length != 0) {
+        event["hasReceived"] = true;
+    }else{
+        event["hasReceived"] = false;
+    }
+    if (event.messages.length != 0) {
+        event["hasWritten"] = true;
+    }else{
+        event["hasWritten"] = false;
+    }
   res.render("letter", event);
 };
 
@@ -16,7 +25,16 @@ exports.submitForm = function(req, res) {
   var newMessage = thankyou + " " + learn + " " + wish + " " + anything;
   addMessage(eventId, newMessage);
   var event = findEvent(eventId);
-
+    if (event.receive.length != 0) {
+        event["hasReceived"] = true;
+    }else{
+        event["hasReceived"] = false;
+    }
+    if (event.messages.length != 0) {
+        event["hasWritten"] = true;
+    }else{
+        event["hasWritten"] = false;
+    }
   res.render("letter", event);
 };
 
@@ -40,4 +58,9 @@ function addMessage(eventId, newMessage) {
       total_events.events[i].messages.push(newMessage);
     }
   }
+}
+
+exports.delete = function(req, res) {
+    total_events.events = total_events.events.filter(function (elem) { return elem.id !== req.params.event_id; });
+    console.log(total_events.events);
 }
