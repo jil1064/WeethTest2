@@ -22,7 +22,7 @@ function initializePage() {
   $(".receiveButton").click(receiveClick);
   $(".writeButton").click(writeClick);
   $(".addFriendButton").click(addFriendIcon);
-  // $(".notiAction2").click(changeNotifStatus);
+  $(".existFriend").click(chooseFriend);
 }
 
 function goBack() {
@@ -108,8 +108,30 @@ function addFriendIcon(){
     }
 }
 
-// function changeNotifStatus(){
-//   console.log("clicked");  
-//   $("#pastNotif").css("display","inline");
-//   $("#newNotif").css("display","none");
-// }
+function showFriends(){
+  $(".exist-friends").css("display","block");
+}
+
+function selectFriend(){
+  var input = document.getElementById("createFriend");
+  var div = $(".exist-friends").find("p");
+  var filter = input.value.toUpperCase();
+
+  for(var i = 0; i < div.length; i++){
+    var p = div[i].innerHTML;
+
+    if(p.toUpperCase().indexOf(filter) > -1){
+      div[i].style.display = "block";
+    } else {
+      div[i].style.display = "none";
+    }
+  }
+}
+
+function chooseFriend(){
+  $(".exist-friends").css("display","none");
+
+  var name = this.innerHTML;
+  var input = document.getElementById("createFriend")
+  input.value = name;
+}

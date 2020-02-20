@@ -346,7 +346,7 @@
         height: 80%;
     }
 
-    #autofill {
+    #autoFill {
         margin-bottom: -5vh;
         border: 1px solid lightgrey;
         height: auto;
@@ -355,11 +355,23 @@
         padding: 1vh;
         display: none;
         overflow: scroll;
+        cursor: pointer;
+
     }
 
-    #createFriend:focus + #autofill {
-        display: block;
-     }
+    .exist-friends{
+      list-style: none;
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+    }
+
+    .existFriend {
+      padding: 2vh 4vw 2vh 4vw;
+      margin: 0 0 0 0;
+      color: black;
+      cursor: pointer;
+      text-align: left;
+    }
 
     #createFinish {
       background-color: #B0B0B0;
