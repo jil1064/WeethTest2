@@ -29,7 +29,11 @@ function initializePage() {
 }
 
 function goBack() {
-  window.history.back();
+  if(window.location.href == document.referrer){
+      window.history.go(-2);
+  }else{
+      window.history.go(-1);
+  }  
 }
 
 function buttonFeed(x, y) {
