@@ -65,15 +65,13 @@
     }
 
     #createEve {
-      border-radius: 50%;
-      background: darkgrey;
-      width: 10vh;
-      height: 10vh;
-      margin-top: -1vh;
-      border: none;
-      color: white;
-      font-size: 8.5vh;
-    }
+       position: fixed;
+       bottom: 1vh;
+       right: 40vw;
+       left: 41vw;
+       width: 10vh;
+       cursor: pointer;
+     }
 
     #timeline {
         position: absolute;
@@ -311,7 +309,6 @@
 
   .friendPhoto {
     padding: 0 0 0 6vw;
-    width: 10vh;
     height: 7vh;
   }
 
