@@ -28,7 +28,7 @@
         <img id="friends" onclick="window.location.href='/friends'" src="../img/friends.png">
     </div>
 
-    <div id="timeline">
+    <div id="timeline" style="margin-bottom: 20vh;">
         {{#each events}}
         <div class="event" onclick="window.location.href='/letter/{{id}}'">
             <div class="month">{{month}}</div>
@@ -37,7 +37,6 @@
             <div class="eventCard">{{title}} at {{location}}<br>weeth {{weeth}}</div>
         </div>
         {{/each}}
-        <br><br><br><br>
     </div>
 
 </body>
