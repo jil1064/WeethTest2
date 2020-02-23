@@ -63,6 +63,7 @@ exports.view = function(req, res) {
   total_events.events.sort(function(a, b) {
     return Date.parse(b.date) - Date.parse(a.date);
   });
+  console.log(total_events.events.length);
   res.render("home", total_events);
 };
 

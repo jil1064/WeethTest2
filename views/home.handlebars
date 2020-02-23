@@ -28,6 +28,7 @@
         <img id="friends" onclick="window.location.href='/friends'" src="../img/friends.png">
     </div>
 
+    {{#if events.length}}
     <div id="timeline" style="margin-bottom: 20vh;">
         {{#each events}}
         <div class="event" onclick="window.location.href='/letter/{{id}}'">
@@ -38,7 +39,9 @@
         </div>
         {{/each}}
     </div>
-
+    {{else}}
+    <h1 style="margin-top: 50%">There's no current event yet...</h1>
+    {{/if}}
 </body>
 
 </html>
