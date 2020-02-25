@@ -48,27 +48,43 @@
         overflow: visible;
     }
 
+    #home {
+        position: fixed;
+        bottom: 1vh;
+        left: 10vw;
+        width: 8vh;
+        cursor: pointer;
+    }
+
     #noti {
         position: fixed;
         bottom: 2vh;
-        left: 17vw;
+        left: 35vw;
         width: 5vh;
         cursor: pointer;
     }
 
     #friends {
         position: fixed;
-        bottom: 2vh;
-        right: 17vw;
+        bottom: 2.5vh;
+        right: 34vw;
         width: 5vh;
         cursor: pointer;
     }
 
-    #createEve {
+    #createEveA {
+       position: fixed;
+       bottom: 1.3vh;
+       right: 10.5vw;
+       width: 7vh;
+       cursor: pointer;
+       display: none;
+     }
+
+    #createEveB {
        position: fixed;
        bottom: 1vh;
-       right: 40vw;
-       left: 41vw;
+       right: 5vw;
        width: 10vh;
        cursor: pointer;
      }
