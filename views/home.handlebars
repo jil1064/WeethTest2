@@ -23,15 +23,31 @@
     </div>
 
     <div id="botBar" class="bar fixed-nav-bar">
+        {{#if viewB}}
+        <img id="home" onclick="window.location.href='/homeB'" src="../img/home.png">
+        <img id="noti" onclick="window.location.href='/notificationB'" src="../img/noti.png">
+        <img id="friends" onclick="window.location.href='/friendsB'" src="../img/friends.png">
+        <img id="createEveB" onclick="window.location.href='/createB'" src="../img/createEventButton.png">
+        {{else}}
         <img id="home" onclick="window.location.href='/home'" src="../img/home.png">
         <img id="noti" onclick="window.location.href='/notification'" src="../img/noti.png">
         <img id="friends" onclick="window.location.href='/friends'" src="../img/friends.png">
-        <img id="createEveA" onclick="window.location.href='create'" src="../img/createA.png">
-        <img id="createEveB" onclick="window.location.href='create'" src="../img/createEventButton.png">
+        <img id="createEveA" onclick="window.location.href='/create'" src="../img/createA.png">
+        {{/if}}
     </div>
 
     {{#if events.length}}
     <div id="timeline" style="margin-bottom: 20vh;">
+        {{#if viewB}}
+        {{#each events}}
+        <div class="event" onclick="window.location.href='/letterB/{{id}}'">
+            <div class="month">{{month}}</div>
+            <div class="eventDot"></div>
+            <div class="eventDate">{{date}}</div>
+            <div class="eventCard">{{title}} at {{location}}<br>weeth {{weeth}}</div>
+        </div>
+        {{/each}}
+        {{else}}
         {{#each events}}
         <div class="event" onclick="window.location.href='/letter/{{id}}'">
             <div class="month">{{month}}</div>
@@ -40,6 +56,7 @@
             <div class="eventCard">{{title}} at {{location}}<br>weeth {{weeth}}</div>
         </div>
         {{/each}}
+        {{/if}}
     </div>
     {{else}}
     <h1 style="margin-top: 50%">There's no current event yet...</h1>

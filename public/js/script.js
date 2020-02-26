@@ -1,23 +1,23 @@
 $(document).ready(function() {
-    initializePage();
+  initializePage();
 });
 
-function receiveClick(){
-//    e.preventDefault();
-    $(this).addClass('activate');
-    $('.writeButton').removeClass('activate');
-    $('#receiveDiv').fadeIn();
-    $('#writeDiv').fadeOut();
-    $('#writeDivfake').fadeOut();
+function receiveClick() {
+  //    e.preventDefault();
+  $(this).addClass("activate");
+  $(".writeButton").removeClass("activate");
+  $("#receiveDiv").fadeIn();
+  $("#writeDiv").fadeOut();
+  $("#writeDivfake").fadeOut();
 }
 
-function writeClick(e){
-//    e.preventDefault();
-    $(this).addClass('activate');
-    $('.receiveButton').removeClass('activate');
-    $('#receiveDiv').fadeOut();
-    $('#writeDiv').fadeIn();
-    $('#writeDivfake').fadeIn();
+function writeClick(e) {
+  //    e.preventDefault();
+  $(this).addClass("activate");
+  $(".receiveButton").removeClass("activate");
+  $("#receiveDiv").fadeOut();
+  $("#writeDiv").fadeIn();
+  $("#writeDivfake").fadeIn();
 }
 
 function initializePage() {
@@ -29,25 +29,25 @@ function initializePage() {
 }
 
 function goBack() {
-  if(window.location.href == document.referrer){
-      window.history.go(-2);
-  }else{
-      window.history.go(-1);
-  }  
+  if (window.location.href == document.referrer) {
+    window.history.go(-2);
+  } else {
+    window.history.go(-1);
+  }
 }
 
 function buttonFeed(x, y) {
-    $(x).html(y);
-    $(x).fadeOut(1200);
-    setTimeout('history.go(-1)', 1200);
+  $(x).html(y);
+  $(x).fadeOut(1200);
+  setTimeout("history.go(-1)", 1200);
 }
 
-function addFriendClick(){
+function addFriendClick() {
   $("#addFriend").fadeOut(450);
-  $(".addFriendDiv").css("display","none");
+  $(".addFriendDiv").css("display", "none");
   $(".friendDiv").fadeOut(450);
   // $(".hiddenFriend").fadeIn(500);
-  $(".hiddenFriend").css("display","inline-flex");
+  $(".hiddenFriend").css("display", "inline-flex");
   $(".friendLabel").text("Suggested Friends");
 
   var searchBar = document.createElement("div");
@@ -57,46 +57,46 @@ function addFriendClick(){
 
   searchBar.style = "padding-bottom: 3vh;";
 
-  $(searchBar).attr("id","searchDiv");
+  $(searchBar).attr("id", "searchDiv");
   $(input).addClass("searchBar");
-  $(input).attr("type","text");
-  $(input).attr("name","search");
-  $(input).attr("placeholder","Search");
-  $(input).attr("autocomplete","off");
-  $(input).attr("id","searchBar");
-  $(input).attr("value","");
+  $(input).attr("type", "text");
+  $(input).attr("name", "search");
+  $(input).attr("placeholder", "Search");
+  $(input).attr("autocomplete", "off");
+  $(input).attr("id", "searchBar");
+  $(input).attr("value", "");
   $(input).attr("onkeyup", "search()");
 
-  $(friendCancel).attr("id","friendCancel");
-  $(friendCancel).attr("onclick","friendCancel()");
-  $(friendCancel).text('Cancel');
+  $(friendCancel).attr("id", "friendCancel");
+  $(friendCancel).attr("onclick", "friendCancel()");
+  $(friendCancel).text("Cancel");
 
   searchBar.appendChild(input);
   searchBar.appendChild(friendCancel);
   $(searchBar).insertAfter(position);
 }
 
-function friendCancel(){
+function friendCancel() {
   $("#addFriend").fadeIn(450);
-  $(".addFriendDiv").css("display","inline-flex");
+  $(".addFriendDiv").css("display", "inline-flex");
   $(".friendDiv").fadeIn(450);
   $(".hiddenFriend").fadeOut(500);
-  $(".hiddenFriend").css("display","none");
+  $(".hiddenFriend").css("display", "none");
   $(".friendLabel").text("Your Friends");
   $("#searchDiv").remove();
-  $('.searchBar').css("display","none");
-  $('#friendCancel').css("display","none");
+  $(".searchBar").css("display", "none");
+  $("#friendCancel").css("display", "none");
 }
 
-function search(){
+function search() {
   var input = document.getElementById("searchBar");
   var div = $(".hiddenFriend");
   var filter = input.value.toUpperCase();
 
-  for(var i = 0; i < div.length; i++){
+  for (var i = 0; i < div.length; i++) {
     var a = div[i].getElementsByTagName("a")[0].innerHTML;
 
-    if(a.toUpperCase().indexOf(filter) > -1){
+    if (a.toUpperCase().indexOf(filter) > -1) {
       div[i].style.display = "";
     } else {
       div[i].style.display = "none";
@@ -104,30 +104,30 @@ function search(){
   }
 }
 
-function addFriendIcon(){
+function addFriendIcon() {
   console.log($(this));
-    var div = $(".hiddenFriend");
-    var p;
+  var div = $(".hiddenFriend");
+  var p;
 
-    for(var i = 0; i < div.length; i++){
-      p = div[i].getElementsByTagName("p")[0].innerHTML;
-      console.log(p);
-    }
+  for (var i = 0; i < div.length; i++) {
+    p = div[i].getElementsByTagName("p")[0].innerHTML;
+    console.log(p);
+  }
 }
 
-function showFriends(){
-  $(".exist-friends").css("display","block");
+function showFriends() {
+  $(".exist-friends").css("display", "block");
 }
 
-function selectFriend(){
+function selectFriend() {
   var input = document.getElementById("createFriend");
   var div = $(".exist-friends").find("p");
   var filter = input.value.toUpperCase();
 
-  for(var i = 0; i < div.length; i++){
+  for (var i = 0; i < div.length; i++) {
     var p = div[i].innerHTML;
 
-    if(p.toUpperCase().indexOf(filter) > -1){
+    if (p.toUpperCase().indexOf(filter) > -1) {
       div[i].style.display = "block";
     } else {
       div[i].style.display = "none";
@@ -135,26 +135,37 @@ function selectFriend(){
   }
 }
 
-function chooseFriend(){
-  $(".exist-friends").css("display","none");
+function chooseFriend() {
+  $(".exist-friends").css("display", "none");
 
   var name = this.innerHTML;
-  var input = document.getElementById("createFriend")
+  var input = document.getElementById("createFriend");
   input.value = name;
 }
 
 function deleteEvent() {
-    var url = $(location).attr('href');
-    var id = url.charAt( url.length - 1 );
-    $.ajax({
-        url: '/letter/delete/' + id,
-        method: 'DELETE',
-        data: { id: id }
-        });
-    window.location.href='/home';
+  var url = $(location).attr("href");
+  var id = url.charAt(url.length - 1);
+  $.ajax({
+    url: "/letter/delete/" + id,
+    method: "DELETE",
+    data: { id: id }
+  });
+  window.location.href = "/home";
 }
 
-function saveChanges(){
+function deleteEventB() {
+  var url = $(location).attr("href");
+  var id = url.charAt(url.length - 1);
+  $.ajax({
+    url: "/letterB/deleteB/" + id,
+    method: "DELETE",
+    data: { id: id }
+  });
+  window.location.href = "/homeB";
+}
+
+function saveChanges() {
   var profileImg = document.getElementById("userPhoto").src;
   var profileName = document.getElementById("profileNameTwo").value;
   var email = document.getElementById("profileEmail").value;

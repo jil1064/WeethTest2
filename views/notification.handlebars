@@ -19,18 +19,26 @@
         <p style="margin-top: 1.75vh; font-size: 4.5vh;">Notification</p>
         <!--        <img id="back" onclick="goBack()" src="../img/back.png">-->
         <a href="/home">
-        <!--        <img id="homeButton" src="../img/homeButton.png" text-align="center" />-->
-    </a>
+            <!--        <img id="homeButton" src="../img/homeButton.png" text-align="center" />-->
+        </a>
     </div>
 
     <div id="botBar" class="bar fixed-nav-bar">
-        <img id="createEve" onclick="window.location.href='create'" src="../img/createEventButton.png">
+        {{#if viewB}}
+        <img id="home" onclick="window.location.href='/homeB'" src="../img/home.png">
+        <img id="noti" onclick="window.location.href='/notificationB'" src="../img/noti.png">
+        <img id="friends" onclick="window.location.href='/friendsB'" src="../img/friends.png">
+        <img id="createEveB" onclick="window.location.href='/createB'" src="../img/createEventButton.png">
+        {{else}}
+        <img id="home" onclick="window.location.href='/home'" src="../img/home.png">
         <img id="noti" onclick="window.location.href='/notification'" src="../img/noti.png">
         <img id="friends" onclick="window.location.href='/friends'" src="../img/friends.png">
+        <img id="createEveA" onclick="window.location.href='/create'" src="../img/createA.png">
+        {{/if}}
     </div>
 
     <div style="margin-top: 13vh;">
-<!--
+        <!--
         <div class="notiCard">
             <img class="notiUser" src="https://loremflickr.com/260/260">
             <p class="notiContent">Christy Ha<br><span style="font-weight: 100;">sent a friend request</span></p>
@@ -38,7 +46,7 @@
             <a class="notiAction2">accept</a>
         </div>
 -->
-<!--
+        <!--
         {{#if alreadyRead}}
         <p id="pastNotif" style="font-size: 2.7vh; display: none;">Past Notifications</p>
         {{else}}
@@ -50,9 +58,14 @@
 
         <div class="notiCard">
             <img class="notiUser" src="https://loremflickr.com/260/260">
-            <p class="notiContent">Jianan<br><span style="font-weight: 100;">wrote to you for "Bowling Again at Superbowl"</span></p>
-<!--            <a class="notiAction1">Remind me</a>-->
+            <p class="notiContent">Jianan<br><span style="font-weight: 100;">wrote to you for "Bowling Again at
+                    Superbowl"</span></p>
+            <!--            <a class="notiAction1">Remind me</a>-->
+            {{#if viewB}}
+            <a class="notiAction2" onclick="window.location.href = '/fakeletterB';">View</a>
+            {{else}}
             <a class="notiAction2" onclick="window.location.href = '/fakeletter';">View</a>
+            {{/if}}
         </div>
     </div>
 

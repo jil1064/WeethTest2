@@ -55,6 +55,16 @@ app.get("/letter/:event_id", letter.view);
 app.post("/letter/:event_id", letter.submitForm);
 app.delete("/letter/delete/:event_id", letter.delete);
 
+app.get("/homeB", home.viewB);
+app.get("/friendsB", friends.listB);
+app.get("/notificationB", notification.listB);
+app.get("/createB", create.createEventB);
+app.get("/friendsB/:friend", friend.listB);
+app.get("/fakeletterB", fakeletter.viewB);
+app.get("/letterB/:event_id", letter.viewB);
+app.post("/letterB/:event_id", letter.submitFormB);
+// app.delete("/letterB/deleteB/:event_id", letter.deleteB);
+
 http.createServer(app).listen(app.get("port"), function() {
   console.log("Express server listening on port " + app.get("port"));
 });
