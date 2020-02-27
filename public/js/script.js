@@ -146,24 +146,29 @@ function chooseFriend() {
 function deleteEvent() {
   var url = $(location).attr("href");
   var id = url.charAt(url.length - 1);
+  var version = url.charAt(url.length - 3);
   $.ajax({
     url: "/letter/delete/" + id,
     method: "DELETE",
     data: { id: id }
   });
-  window.location.href = "/home";
+  if (version == "B") {
+    window.location.href = "/homeB";  
+  }else{
+    window.location.href = "/home";  
+  } 
 }
 
-function deleteEventB() {
-  var url = $(location).attr("href");
-  var id = url.charAt(url.length - 1);
-  $.ajax({
-    url: "/letterB/deleteB/" + id,
-    method: "DELETE",
-    data: { id: id }
-  });
-  window.location.href = "/homeB";
-}
+//function deleteEventB() {
+//  var url = $(location).attr("href");
+//  var id = url.charAt(url.length - 1);
+//  $.ajax({
+//    url: "/letterB/deleteB/" + id,
+//    method: "DELETE",
+//    data: { id: id }
+//  });
+//  window.location.href = "/homeB";
+//}
 
 function saveChanges() {
   var profileImg = document.getElementById("userPhoto").src;
