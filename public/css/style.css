@@ -9,9 +9,10 @@ body {
   left: 0;
   width: 100%;
   height: 9vh;
-  background: #f1f1f1;
+  background: #ffdd00;
   text-align: center;
   z-index: 900;
+  font-family: "Roboto";
 }
 
 #navBar {
@@ -20,9 +21,11 @@ body {
 
 #profileHome {
   position: fixed;
-  top: 0.75vh;
-  right: 0.75vh;
+  top: 1.2vh;
+  right: 1.2vh;
   width: 7vh;
+  height: 7vh;
+  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -32,6 +35,7 @@ body {
   left: 1.5vh;
   width: 4vh;
   cursor: pointer;
+  opacity: .5;
 }
 
 #homeButton {
@@ -46,46 +50,48 @@ body {
 #botBar {
   bottom: 0;
   overflow: visible;
+  background: white;
+  border-top: 1px solid #e5e5e5;
 }
 
 #home {
   position: fixed;
   bottom: 1vh;
   left: 10vw;
-  width: 8vh;
+  width: 7vh;
   cursor: pointer;
 }
 
 #noti {
   position: fixed;
-  bottom: 2vh;
-  left: 35vw;
-  width: 5vh;
+  bottom: 1vh;
+  left: 32.5vw;
+  width: 7vh;
   cursor: pointer;
 }
 
 #friends {
   position: fixed;
-  bottom: 2.5vh;
-  right: 34vw;
-  width: 5vh;
+  bottom: 1vh;
+  right: 32.5vw;
+  width: 7vh;
   cursor: pointer;
 }
 
 #createEveA {
   position: fixed;
-  bottom: 1.3vh;
+  bottom: 1vh;
   right: 10.5vw;
-  width: 7vh;
+  width: 7.3vh;
   cursor: pointer;
   /* display: none; */
 }
 
 #createEveB {
   position: fixed;
-  bottom: 1vh;
-  right: 5vw;
-  width: 10vh;
+  bottom: 0vh;
+  right: 3.5vw;
+  width: 13vh;
   cursor: pointer;
 }
 
@@ -95,7 +101,8 @@ body {
   top: 10vh;
   width: 75vw;
   height: auto;
-  border-left: 1px solid black;
+/*  border-left: 1px solid black;*/
+  border-left: 1px solid #ffbd00;
   margin-top: 5vh;
   text-align: left;
   font-size: 2.7vh;
@@ -109,11 +116,13 @@ body {
   margin-left: -13vw;
   margin-bottom: -7vw;
   font-weight: bold;
+  color: #ffbd00;
 }
 
 .eventDot {
   border-radius: 50%;
-  background: black;
+/*  background: black;*/
+  background: #ffbd00;
   width: 3vw;
   height: 3vw;
   margin-left: -1.7vw;
@@ -123,13 +132,16 @@ body {
 .eventDate {
   margin-left: 5vw;
   margin-top: -5vw;
+  font-weight: bold;
 }
 
 .eventCard {
   margin-left: 5vw;
   margin-top: 0vw;
-  background: #e5e5e5;
+  background: #fff8c9;
   padding: 1vh;
+  border-radius: 2vw;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 .loginLabel {
@@ -313,26 +325,29 @@ body {
 }
 
 #addFriend {
-  padding: 1.5vh 20vw 1.5vh 20vw;
-  font-size: 3vh;
+  margin-top: -2.5vh;
+  padding: .8vh 12vw;
+  font-size: 2.5vh;
   font: "Roboto";
   outline: none;
-  border: none;
-  background-color: #e5e5e5;
-  color: black;
+  border: 2px solid #ffbd00;
+  border-radius: 3vw;
+  background: white;
+  color: #ffbd00;
   text-decoration: none;
 }
 
 .friendPhoto {
-  padding: 0 0 0 6vw;
+  margin-left: 6vw;
   height: 7vh;
+  width: 7vh;
+  border-radius: 50%;
 }
 
 .friendText {
   font-family: "Roboto";
-  font-size: 2.7vh;
+  font-size: 3vh;
   margin: 0;
-  font-weight: 100;
   text-align: right;
   color: black;
   text-decoration: none;
@@ -353,8 +368,9 @@ body {
   width: 5vw; 
   height: auto; 
   margin-right: 9%; 
-  margin-top: 1vh;
+  margin-top: 1.3vh;
   float: right;
+  opacity: .25;
 }
 
 .createForm {
@@ -367,7 +383,7 @@ body {
 
 #autoFill {
   margin-bottom: -5vh;
-  border: 1px solid lightgrey;
+/*  border: 1px solid lightgrey;*/
   height: auto;
   color: lightgray;
   text-align: left;
@@ -378,6 +394,7 @@ body {
 }
 
 .exist-friends {
+  font-size: 2.5vh;
   list-style: none;
   margin: 0 0 0 0;
   padding: 0 0 0 0;
@@ -389,26 +406,33 @@ body {
   color: black;
   cursor: pointer;
   text-align: left;
+  background: white;
+  border: none;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 #createFinish {
-  background-color: #b0b0b0;
-  border: 1px solid #b0b0b0;
+  background-color: #ffdd00;
   color: #000000;
-  padding: 1.5vh 0;
+  padding: 1.2vh 0;
   text-align: center;
+  font-size: 3.5vh;
 }
 
 .createForm input {
   width: 100%;
   padding: 1vh;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ffdd00;
   /*      padding: 1.5vh 25vh 2vh 2vh;*/
   text-align: left;
   font-size: 3vh;
   margin-top: 1vh;
   width: 80vw;
-  background-color: #e0e0e0;
+  background-color: white;
+}
+
+::placeholder {
+  color: lightgray;
 }
 
 .allNotis {
@@ -422,14 +446,15 @@ body {
 .notiCard {
   display: block;
   position: relative;
-  margin-left: 5vw;
+  margin-left: 6vw;
   margin-bottom: 4vh;
   width: 72vw;
   height: 17vh;
   padding: 3vw 6vw;
-  background: #f1f1f1;
+  background: #fff8c9;
   text-align: left;
   font-size: 2.7vh;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 .notiUser {
@@ -462,21 +487,24 @@ body {
   bottom: 3vh;
   right: 4vw;
   padding: 0.5vw 2.5vw;
-  background: gray;
+  background: #ffdd00;
   color: white;
-  border: 1px solid gray;
+  border: 1px solid #ffdd00;
   border-radius: 6vw;
 }
 
 .searchBar {
   display: inline-block;
-  width: 75%;
+  width: 70%;
   height: 5vh;
-  background: #e5e5e5;
-  border: none;
+/*  background: #e5e5e5;*/
+  border: 1px solid #ffdd00;
   overflow: hidden;
   padding-left: 2%;
+  margin-left: 4vw;
   outline: none;
+  font-size: 2.5vh;
+  margin-top: -1vh;
 }
 
 .hiddenFriend {
@@ -491,6 +519,7 @@ body {
 .friendLabel {
   text-align: left;
   padding-left: 2%;
+  font-size: 2.5vh;
 }
 
 #friendCancel {
@@ -500,12 +529,12 @@ body {
   border: none;
   overflow: hidden;
   height: 5vh;
-  color: #000000;
+  color: darkgray;
   text-align: center;
   font-family: Roboto;
   font-weight: bold;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 2.2vh;
   padding-left: 10px;
 }
 

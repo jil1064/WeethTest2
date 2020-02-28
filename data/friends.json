@@ -2,23 +2,23 @@
   "friends": [
     {
       "name": "Christina",
-      "imgURL": ""
+      "imgURL": "http://jianands.com/placeholder/1.jpg"
     },
     {
       "name": "David",
-      "imgURL": ""
+      "imgURL": "http://jianands.com/placeholder/2.jpg"
     },
     {
       "name": "Jianan",
-      "imgURL": ""
+      "imgURL": "http://jianands.com/placeholder/3.jpg"
     },
     {
       "name": "John",
-      "imgURL": ""
+      "imgURL": "http://jianands.com/placeholder/4.jpg"
     },
     {
       "name": "Amy",
-      "imgURL": ""
+      "imgURL": "http://jianands.com/placeholder/5.jpg"
     }
   ],
   "possibleFriends": [

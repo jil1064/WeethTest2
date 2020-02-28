@@ -78,7 +78,7 @@ function addFriendClick() {
 
 function friendCancel() {
   $("#addFriend").fadeIn(450);
-  $(".addFriendDiv").css("display", "inline-flex");
+  $(".addFriendDiv").css("display", "inline-block");
   $(".friendDiv").fadeIn(450);
   $(".hiddenFriend").fadeOut(500);
   $(".hiddenFriend").css("display", "none");

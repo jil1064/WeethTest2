@@ -1,7 +1,7 @@
 {
     "user":{
         "name": "Alex Doe",
-        "userPhoto": "../img/profile.png",
+        "userPhoto": "http://jianands.com/placeholder/6.jpg",
         "email":"alex_doe@gmail.com",
         "password":"•••••••••••"
     }
