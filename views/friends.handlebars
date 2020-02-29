@@ -2,80 +2,83 @@
 <html>
 
 <head>
-    <title>Weeth</title>
-    <link rel="icon" href="">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="../js/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <script src="../js/script.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+   {{> header}}
 </head>
 
 <body>
 
-    <div id="navBar" class="bar">
-        <p style="margin-top: 1.75vh; font-size: 4.5vh;">Friends</p>
-<!--        <img id="back" onclick="goBack()" src="../img/back.png">-->
-        <a href="/home">
-      <img id="homeButton" src="../img/homeButton.png" text-align="center" />
+  <div id="navBar" class="bar">
+    <p style="margin-top: 1.25vh; font-size: 4.5vh;">Friends</p>
+    <!--        <img id="back" onclick="goBack()" src="../img/back.png">-->
+    <a href="/home">
+      <!--        <img id="homeButton" src="../img/homeButton.png" text-align="center" />-->
     </a>
-    </div>
+  </div>
 
-    <div id="botBar" class="bar fixed-nav-bar">
-        <img id="createEve" onclick="window.location.href='create'" src="../img/createEventButton.png">
-        <img id="noti" onclick="window.location.href='/notification'" src="../img/noti.png">
-        <img id="friends" onclick="window.location.href='/friends'" src="../img/friends.png">
-    </div>
+  <div id="botBar" class="bar fixed-nav-bar">
+    {{#if viewB}}
+    <img id="home" onclick="window.location.href='/homeB'" src="../img/home.png" style="filter: grayscale(100%);">
+    <img id="noti" onclick="window.location.href='/notificationB'" src="../img/noti.png" style="filter: grayscale(100%);">
+    <img id="friends" onclick="window.location.href='/friendsB'" src="../img/friends.png">
+    <img id="createEveB" onclick="window.location.href='/createB'" src="../img/createEventButton.png">
+    {{else}}
+    <img id="home" onclick="window.location.href='/home'" src="../img/home.png" style="filter: grayscale(100%);">
+    <img id="noti" onclick="window.location.href='/notification'" src="../img/noti.png" style="filter: grayscale(100%);">
+    <img id="friends" onclick="window.location.href='/friends'" src="../img/friends.png">
+    <img id="createEveA" onclick="window.location.href='/create'" src="../img/createA.png" style="filter: grayscale(100%);">
+    {{/if}}
+  </div>
 
 
-    <br><br><br><br><br>
+  <br><br><br><br><br>
 
-    <div class="addFriendDiv">
-      <button id="addFriend" onclick="addFriendClick()">Add Friend</button>
-      <br><br>
-    </div>
-    <p class="friendLabel">Your Friends</p>
+  <div class="addFriendDiv">
+    <button id="addFriend" onclick="addFriendClick()">Add Friend</button>
+    <br><br>
+  </div>
+  <p class="friendLabel" style="margin-left: 6vw;">Your Friends</p>
 
-    {{#each possibleFriends}}
-    <div class="hiddenFriend" style="display: none;" data-toggle="modal" data-target="#fakeAdd">
-      <img class="friendPhoto" src="img/friendProfile.png">
-      <a class="friendText">{{name}}</a>
-      <a class="addFriendButton">
-        <img class="addIcon" src="img/addFriendBefore.svg">
-      </a>
-    </div>
-    {{/each}}
+  {{#each possibleFriends}}
+  <div class="hiddenFriend" style="display: none;" data-toggle="modal" data-target="#fakeAdd">
+    <img class="friendPhoto" src="img/friendProfile.png">
+    <a class="friendText">{{name}}</a>
+    <a class="addFriendButton">
+      <img class="addIcon" src="img/addFriendBefore.svg">
+    </a>
+  </div>
+  {{/each}}
 
-    <div class="modal fade" id="fakeAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Imagine you successfully added someone (adding friends is not our unique interaction, so we skip implementing this function due to the workload. Thank you.)</h5>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" onclick="window.location.href='/friends'">Got it</button>
+  <div class="modal fade" id="fakeAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Imagine you successfully added someone (adding friends is not
+            our unique interaction, so we skip implementing this function due to the workload. Thank you.)</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="window.location.href='/friends'">Got it</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-    {{#each friends}}
-    <div class="friendDiv" onclick="window.location.href = '/friends/{{name}}';">
-      <img class="friendPhoto" src="img/friendProfile.png">
-      <a class="friendText">{{name}}</a>
-    </div>
-    {{/each}}
+  {{#if viewB}}
+  {{#each friends}}
+  <div class="friendDiv" onclick="window.location.href = '/friendsB/{{name}}';">
+    <img class="friendPhoto" src="{{imgURL}}">
+    <a class="friendText">{{name}}</a>
+    <img class="friendClickIcon" src="img/clickFriendIcon.png">
+  </div>
+  {{/each}}
+  {{else}}
+  {{#each friends}}
+  <div class="friendDiv" onclick="window.location.href = '/friends/{{name}}';">
+    <img class="friendPhoto" src="{{imgURL}}">
+    <a class="friendText">{{name}}</a>
+    <img class="friendClickIcon" src="img/clickFriendIcon.png">
+  </div>
+  {{/each}}
+  {{/if}}
 </body>
 
 </html>

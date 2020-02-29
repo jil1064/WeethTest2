@@ -13,16 +13,16 @@
   <script src="../js/facebookProfile.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,800&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
-
-  <div id="navBar" class="bar">
-    <p style="margin-top: 1.75vh; font-size: 4.5vh;">Profile</p>
-    <img id="back" onclick="goBack()" src="img/back.png">
+  <img id="back" onclick="goBack()" src="img/back.png">
+  <div id="navBar" class="bar" style="height: 22vh; background: linear-gradient(360deg, #FFCA10 -6.05%, rgba(255, 202, 16, 0.8) 37.58%); z-index: -1;">
+    {{!-- <p style="margin-top: 1.75vh; font-size: 4.5vh;">Profile</p> --}}
   </div>
-  <br><br><br><br>
+
 
   <img id="userPhoto" src="{{user.userPhoto}}" draggable="false">
   <p id="profileName">{{user.name}}</p>
@@ -30,33 +30,27 @@
 
   <form>
     <div display="block" class="input-icons">
-      <label for="username" class="profileFill">Username</label><br>
-      <i class="fa fa-user icon"></i>
-      <i class="fa fa-pencil icon editIcon"></i>
+      <i class="fa fa-user icon" style="padding: 2vh 0 0 4vw; color: rgba(29, 29, 29, 0.95);"></i>
+      {{!-- <i class="fa fa-pencil icon editIcon"></i> --}}
       <input id="profileNameTwo" class="profileText" onClick="this.select();" type="text" value="{{user.name}}"></input>
     </div>
 
     <div display="block" class="input-icons">
-      <label for="email" class="profileFill">Email</label><br>
-      <i class="fa fa-envelope icon"></i>
-      <i class="fa fa-pencil icon editIcon"></i>
+      <i class="fa fa-envelope icon" style="padding: 2vh 0 0 4vw; color: rgba(29, 29, 29, 0.95);"></i>
+      {{!-- <i class="fa fa-pencil icon editIcon"></i> --}}
       <input id="profileEmail" class="profileText" onClick="this.select();" type="text" value="{{user.email}}"></input>
     </div>
 
     <div display="block" class="input-icons">
-      <label for="password" class="profileFill">Edit Password</label><br>
-      <i class="fa fa-key icon"> </i>
-      <i class="fa fa-pencil icon editIcon"></i>
+      <i class="fa fa-key icon" style="padding: 2vh 0 0 4vw; color: rgba(29, 29, 29, 0.95);"></i>
+      {{!-- <i class="fa fa-pencil icon editIcon"></i> --}}
       <input id="profilePassword" class="profileText" onClick="this.select();" type="password" value="{{user.password}}"></input>
     </div>
   </form>
-
+  <br>
   <button id="saveChanges">Save Changes</button>
-  <br><br>
-
-  <button id="signOut" onclick="window.location.href='/';">SIGN OUT</button>
   <br><br><br>
-
+  <button id="signOut" onclick="window.location.href='/';">Sign Out</button>
 </body>
 
 </html>

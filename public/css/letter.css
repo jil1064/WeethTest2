@@ -8,7 +8,7 @@ body {
   height: 20vh;
   left: 0px;
   top: 0px;
-  background: #F1F1F1;
+  background: #FED339;
 }
 
 #back {
@@ -18,18 +18,8 @@ body {
     width: 4vh;  
     cursor: pointer;
     z-index: 5;
+    opacity: .5;
 }
-
-/*
-#homeButton {
-    position: fixed;
-    top: 1.75vh;
-    right: 1.75vh;
-    width: 5vh;  
-    cursor: pointer;
-    z-index: 1;
-}
-*/
 
 #name{
   position: absolute;
@@ -41,7 +31,6 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 4.5vh;
-/*  line-height: -8vh;*/
   text-align: center;
 
   color: #000000;
@@ -84,8 +73,8 @@ body {
   padding: 5vh 5vh 5vh 5vh;
   top: 25vh;
   font-family: Roboto;
+  font-weight: 200;
   font-style: normal;
-  font-weight: 300;
   font-size: 2.7vh;
   line-height: 28px;
   color: #000000;
@@ -95,9 +84,9 @@ body {
   position: absolute;
   top: 20vh;
   width: 53%;
-  background-color: #F1F1F1 ;
-  border: 1px solid #B0B0B0;
-  color: #B0B0B0;
+  background-color: #ffbd00;
+  border: 1px solid #ffbd00;
+  color: white;
   padding: .8vh 0;
   text-align: center;
   font-family: Roboto;
@@ -112,9 +101,9 @@ body {
   position: absolute;
   top: 20vh;
   width: 50%;
-  background-color: #F1F1F1 ;
-  border: 1px solid #B0B0B0;
-  color: #B0B0B0;
+  background-color: #ffbd00;;
+  border: 1px solid #ffbd00;;
+  color: white;
   padding: .8vh 0;
   text-align: center;
   right: 0;
@@ -127,25 +116,29 @@ body {
 }
 
 .activate {
-  background-color: #B0B0B0;
-  border: 1px solid #B0B0B0;
-  color: #000000;
+  background: white;
+  font-family: Roboto;
+  font-weight: 600;
+  border: 2px solid white;
+  color:black;
 }
 
 #sendButton {
   position: absolute;
   left: 0vw;
-  bottom: 5vh;
+  bottom: 10vh;
   width: 100%;
-  background-color: #B0B0B0;
-  border: 1px solid #B0B0B0;
+  height: 6vh;
   color: #000000;
-  padding: 1vh 20%;
+  padding: 0vh 20%;
   text-align: center;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 1em;
+  background: #FFD540;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
   box-sizing: border-box;
 }
 
@@ -175,20 +168,17 @@ input {
     position: relative;
     margin-top: 2vh;
     border: none;
+    outline: none;
     padding: 0.5vh 1vh;
     color: #B0B0B0;
-    background: #F1F1F1;
+    background: white;
+    border-radius: 10px;
     width: 100%;
     resize: none;
     height: 5.7vh;
     color: black;
+    box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.08);
 }
-
-/*
-input:focus {
-    height: 15vh;
-}
-*/
 
 #deleteButton {
     position: fixed;

@@ -2,31 +2,25 @@
 <html>
 
 <head>
-    <title>Weeth</title>
-    <link rel="icon" href="">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/script.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+   {{> header}}
 </head>
 
 <body>
 
     <div id="navBar" class="bar">
-        <p style="margin-top: 1.75vh; font-size: 4.5vh;">New Event</p>
+        <p style="margin-top: 1.25vh; font-size: 4.5vh;">New Event</p>
         <img id="back" onclick="goBack()" src="../img/back.png">
     </div>
 
-    <form class="createForm" role="form" method="get" action="/home">
-        <input type="text" id="createFriend" placeholder="Weeth Who?" name="weeth" autocomplete="off" onclick="showFriends()" onkeyup="selectFriend()" value="">
+    {{#if viewB}}
+    <form class="createForm" role="form" method="get" action="/homeB">
+        <input type="text" id="createFriend" placeholder="Weeth Who?" name="weeth" autocomplete="off" onclick="showFriends()"
+            onkeyup="selectFriend()" value="">
 
-        <div class="exist-friends" id="autofill" >
-        {{#each friends}}
+        <div class="exist-friends" id="autofill">
+            {{#each friends}}
             <p class="existFriend">{{name}}</p>
-        {{/each}}
+            {{/each}}
         </div>
 
         <br><br>
@@ -37,6 +31,26 @@
         <input type="submit" id="createFinish" onclick="buttonFeed('#createFinish', 'Have Fun!')" value="Create">
         <p style="opacity: 0; font-size: 30vh;">~</p>
     </form>
+    {{else}}
+    <form class="createForm" role="form" method="get" action="/home">
+        <input type="text" id="createFriend" placeholder="Weeth Who?" name="weeth" autocomplete="off" onclick="showFriends()"
+            onkeyup="selectFriend()" value="">
+
+        <div class="exist-friends" id="autofill">
+            {{#each friends}}
+            <p class="existFriend">{{name}}</p>
+            {{/each}}
+        </div>
+
+        <br><br>
+        <input type="text" id="createTitle" placeholder="Event Title" name="title" autocomplete="off"><br><br>
+        <input type="text" id="createPlace" placeholder="Event Location" name="location" autocomplete="off"><br><br>
+        <input id="createDate" placeholder="Event Date" type="date" name="date"><br><br>
+        <br><br><br>
+        <input type="submit" id="createFinish" onclick="buttonFeed('#createFinish', 'Have Fun!')" value="Create">
+        <p style="opacity: 0; font-size: 30vh;">~</p>
+    </form>
+    {{/if}}
 
 </body>
 

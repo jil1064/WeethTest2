@@ -1,459 +1,585 @@
 /*@media (max-width: 480px) {*/
-    body {
-        font-family: 'Roboto';
-        text-align: center;
-    }
+  @font-face {
+    font-family: "SF Compact Display Semibold";
+    src:local("/fonts/SF-Compact-Display-Semibold.otf");
+}
 
-    .bar {
-        position: fixed;
-        left: 0;
-        width: 100%;
-        height: 9vh;
-        background: #f1f1f1;
-        text-align: center;
-        z-index: 900;
-    }
+  body {
+  font-family: "Roboto";
+  text-align: center;
+}
 
-    #navBar {
-        top: 0;
-    }
+.appColor {
+  background: #FED339;
+}
 
-    #profileHome {
-        position: fixed;
-        top: 0.75vh;
-        right: 0.75vh;
-        width: 7vh;
-        cursor: pointer;
-    }
+.homeSignUpText {
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: "Semibold";
+  font-size: 2.5vh;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-decoration-line: underline;
+  color: #FFFFFF;
+}
 
-    #back {
-        position: fixed;
-        top: 1.5vh;
-        left: 1.5vh;
-        width: 4vh;
-        cursor: pointer;
-    }
+.weethLogo {
+  width: 15vh;
+  padding: 2vw;
+}
 
-    #homeButton {
-        position: fixed;
-        top: 1.75vh;
-        right: 1.75vh;
-        width: 5vh;
-        cursor: pointer;
-        z-index: 1;
-    }
+.bar {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  background: #ffdd00;
+  text-align: center;
+  z-index: 900;
+  font-family: "Roboto";
+}
 
-    #botBar {
-        bottom: 0;
-        overflow: visible;
-    }
+#navBar {
+  top: 0;
+}
 
-    #noti {
-        position: fixed;
-        bottom: 2vh;
-        left: 17vw;
-        width: 5vh;
-        cursor: pointer;
-    }
+#profileHome {
+  position: fixed;
+  top: 1.2vh;
+  right: 1.2vh;
+  width: 7vh;
+  height: 7vh;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
-    #friends {
-        position: fixed;
-        bottom: 2vh;
-        right: 17vw;
-        width: 5vh;
-        cursor: pointer;
-    }
+#back {
+  position: fixed;
+  top: 1.5vh;
+  left: 1.5vh;
+  width: 4vh;
+  cursor: pointer;
+  opacity: .5;
+}
 
-    #createEve {
-       position: fixed;
-       bottom: 1vh;
-       right: 40vw;
-       left: 41vw;
-       width: 10vh;
-       cursor: pointer;
-     }
+#homeButton {
+  position: fixed;
+  top: 1.75vh;
+  right: 1.75vh;
+  width: 5vh;
+  cursor: pointer;
+  z-index: 1;
+}
 
-    #timeline {
-        position: absolute;
-        left: 17vw;
-        top: 10vh;
-        width: 75vw;
-        height: auto;
-        border-left: 1px solid black;
-        margin-top: 5vh;
-        text-align: left;
-        font-size: 2.7vh;
-    }
+#botBar {
+  bottom: 0;
+  overflow: visible;
+  background: white;
+  border-top: 1px solid #e5e5e5;
+}
 
-    .event {
-        margin-bottom: 4.5vh;
-    }
+#home {
+  position: fixed;
+  bottom: 1vh;
+  left: 10vw;
+  width: 7vh;
+  cursor: pointer;
+}
 
-    .month {
-        margin-left: -13vw;
-        margin-bottom: -7vw;
-        font-weight: bold;
-    }
+#noti {
+  position: fixed;
+  bottom: 1vh;
+  left: 32.5vw;
+  width: 7vh;
+  cursor: pointer;
+}
 
-    .eventDot {
-        border-radius: 50%;
-        background: black;
-        width: 3vw;
-        height: 3vw;
-        margin-left: -1.7vw;
-        margin-top: -1.7vw;
-    }
+#friends {
+  position: fixed;
+  bottom: 1vh;
+  right: 32.5vw;
+  width: 7vh;
+  cursor: pointer;
+}
 
-    .eventDate {
-        margin-left: 5vw;
-        margin-top: -5vw;
-    }
+#createEveA {
+  position: fixed;
+  bottom: 1vh;
+  right: 10.5vw;
+  width: 7.3vh;
+  cursor: pointer;
+  /* display: none; */
+}
 
-    .eventCard {
-        margin-left: 5vw;
-        margin-top: 0vw;
-        background: #e5e5e5;
-        padding: 1vh;
-    }
+#createEveB {
+  position: fixed;
+  bottom: 0vh;
+  right: 3.5vw;
+  width: 13vh;
+  cursor: pointer;
+}
 
-    .loginLabel {
-      padding: 1vh 0 1vh 0;
-      bottom: 2vh;
-      text-align: left;
-      margin-left: 2%;
-      float: left;
-    }
+#timeline {
+  position: absolute;
+  left: 17vw;
+  top: 10vh;
+  width: 75vw;
+  height: auto;
+/*  border-left: 1px solid black;*/
+  border-left: 1px solid #ffbd00;
+  margin-top: 5vh;
+  text-align: left;
+  font-size: 2.7vh;
+}
 
-    .appTitle{
-        padding: 6vh 0 6vh 0;
-        margin: 0 0 0 0;
-        font-size: 9vh;
-    }
+.event {
+  margin-bottom: 4.5vh;
+}
 
-    #username{
-      padding: 2vh 10vw 2vh 2vw;
-      width: 80vw;
-      border: none;
-      text-align: left;
-      font-size: 2vh;
-      margin-top: 1vh;
-      background-color: #E0E0E0;
-    }
+.month {
+  margin-left: -13vw;
+  margin-bottom: -7vw;
+  font-weight: bold;
+  color: #ffbd00;
+}
 
-    #password {
-      padding: 2vh 10vw 2vh 2vw;
-      width: 80vw;
-      border: none;
-      text-align: left;
-      font-size: 2vh;
-      margin-top: 1vh;
-      background-color: #E0E0E0;
-    }
+.eventDot {
+  border-radius: 50%;
+/*  background: black;*/
+  background: #ffbd00;
+  width: 3vw;
+  height: 3vw;
+  margin-left: -1.7vw;
+  margin-top: -1.7vw;
+}
 
-    #email {
-      outline: none;
-      border: none;
-      padding: 1.5vh 10vw  2vh 2vw;
-      width: 80vw;
-      text-align: left;
-      font-size: 2vh;
-      margin-top: 1vh;
-      background-color: #E0E0E0;
-    }
+.eventDate {
+  margin-left: 5vw;
+  margin-top: -5vw;
+  font-weight: bold;
+}
 
-    #loginButton {
-      border-radius: 50px;
-      background-color: #B0B0B0;
-      color: #000000;
-      padding: 2vh 20%;
-      text-align: center;
-      font-family: Roboto;
-      font-weight: bolder;
-      text-decoration: none;
-      font-size: 1em;
-      display: inline-flex;
-      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-    }
+.eventCard {
+  margin-left: 5vw;
+  margin-top: 0vw;
+  background: #fff8c9;
+  padding: 1vh;
+  border-radius: 2vw;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
 
+.loginLabel {
+  padding: 1vh 0 1vh 0;
+  bottom: 2vh;
+  text-align: left;
+  margin-left: 0%;
+  float: left;
+}
 
-    #signUpButton {
-      left: 10%;
-      right: 10%;
-      bottom: 6%;
-      position: absolute;
-      width: 80vw;
-      background-color: #B0B0B0;
-      border: 1px solid #B0B0B0;
-      color: #000000;
-      padding: 2vh 20%;
-      text-align: center;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
-      text-decoration: none;
-      font-size: 1em;
-      box-sizing: border-box;
-    }
+.appTitle {
+  padding: 0vh 0 0vh 0;
+  margin: 0 0 0 0;
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 9vh;
+  line-height: 84px;
+  text-align: center;
+  letter-spacing: -0.05em;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
 
-    #createAccount {
-      margin: 0;
-      width: 80vw;
-      background-color: #B0B0B0;
-      border: 1px solid #B0B0B0;
-      color: #000000;
-      padding: 2vh 20%;
-      text-align: center;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
-      text-decoration: none;
-      font-size: 1em;
-      box-sizing: border-box;
-      display: inline-block;
-    }
+#username {
+  padding: 2vh 6vw 2vh 6vw;
+  font-family: Raleway;
+  font-weight: 600;
+  outline: none;
+  width: 75vw;
+  border: none;
+  text-align: left;
+  font-size: 2vh;
+  margin-top: 1vh;
+  background: #FFFFFF;
+  border-radius: 50px;
+}
 
-    #userPhoto{
-    width: 30vw;
-    text-align: center;
-    padding: 3vh 35% 3vh 35% ;
-    border-radius: 50%;
-  }
+input::placeholder {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  color: rgba(29, 29, 29, 0.8);
+}
 
-  #profileName{
-    margin-top: -1.5vh;
-    font-size: 2.5vh;
-  }
+#password {
+  padding: 2vh 6vw 2vh 6vw;
+  font-family: Raleway;
+  font-weight: 600;
+  outline: none;
+  width: 75vw;
+  border: none;
+  text-align: left;
+  font-size: 2vh;
+  margin-top: 1vh;
+  background: #FFFFFF;
+  border-radius: 50px;
+  box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.1);
+}
 
-  .profileText{
-    padding: 1.75vh 45vw 1.75vh 9vw ;
-    width: 90%;
-    font-size: 2vh;
-    text-align: left;
-    outline: none;
-    color: black;
-    margin-bottom: 3vh;
-    background: #F1F1F1;
-    border: none;
-  }
+#email {
+  padding: 2vh 6vw 2vh 6vw;
+  font-family: Raleway;
+  font-weight: 600;
+  outline: none;
+  width: 75vw;
+  border: none;
+  text-align: left;
+  font-size: 2vh;
+  margin-top: 1vh;
+  background: #FFFFFF;
+  border-radius: 50px;
+  box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.1);
+}
 
-  .profileFill{
-    float: left;
-    margin-left: 6vw;
-  }
+#loginButton {
+  color: #FED339;
+  padding: 2vh 39%;
+  text-align: center;
+  font-family: Raleway;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1em;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 18px rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+}
 
-  #saveChanges {
-    padding: 2vh 0 2vh 0;
-    width: 85%;
-    height: 6vh;
-    border: none;
-    outline: none;
-    font: 'Roboto';
-    background-color: #B0B0B0;
-    color: black;
-    font-size: 2vh;
-    text-decoration: none;
-  }
+#signUpButton {
+  left: 10%;
+  right: 10%;
+  bottom: 6%;
+  position: absolute;
+  width: 80vw;
+  background-color: #b0b0b0;
+  border: 1px solid #b0b0b0;
+  color: #000000;
+  padding: 2vh 20%;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 1em;
+  box-sizing: border-box;
+}
 
-  .input-icons i {
-      position: absolute;
-  }
+#createAccount {
+  color: #FED339;
+  padding: 2vh 36%;
+  text-align: center;
+  font-family: Raleway;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1em;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 18px rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+}
 
-  .input-icons {
-      width: 100%;
-      margin-bottom: 10px;
-  }
+#userPhoto {
+  z-index: 1;
+  background-blend-mode: normal;
+  border: 7px solid #FFFFFF;
+  width: 30vw;
+  height: 30vw;
+  margin-top: 11vh;
+  text-align: center;
+  border-radius: 50%;
+}
 
-  .icon {
-      padding: 10px;
-      color: #181818;
-      min-width: 50px;
-      text-align: left;
-  }
+#profileName {
+  margin-top: 1vh;
+  margin-bottom: 0vh;
+  font-size: 4vh;
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.93);
+}
 
-  .editIcon {
-    left: auto;
-    right: -3vw;
-  }
+.profileText {
+  padding: 2.3vh 10vw 2.3vh 11vw;
+  width: 90%;
+  font-size: 2vh;
+  text-align: left;
+  outline: none;
+  color: rgba(29, 29, 29, 0.9);
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 3vh;
+  background: #FFFFFF;
+  border-radius: 50px;
+  box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.1);
+  border: none;
+}
 
-  .input-field {
-      display: inline-block;
-      width: 100%;
-      padding: 10px;
-      text-align: left;
-      font-weight: bold;
-  }
+.profileFill {
+  float: left;
+  margin-left: 6vw;
+}
 
-  #signOut {
-    padding: 2vh 0 2vh 0;
-    width: 85%;
-    height: 6vh;
-    border: none;
-    outline: none;
-    background-color: #B0B0B0;
-    color: black;
-    font-size: 2vh;
-    font: 'Roboto';
-    text-decoration: none;
-  }
+#saveChanges {
+  width: 90%;
+  height: 6vh;
+  white-space: nowrap;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2vh;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  text-decoration: none;
+  background: #FFD540;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
 
-  #addFriend {
-    padding: 1.5vh 20vw 1.5vh 20vw;
-    font-size: 3vh;
-    font: 'Roboto';
-    outline: none;
-    border:none;
-    background-color: #E5E5E5;
-    color: black;
-    text-decoration: none;
-  }
+.input-icons i {
+  position: absolute;
+}
 
-  .friendPhoto {
-    padding: 0 0 0 6vw;
-    height: 7vh;
-  }
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
 
-  .friendText {
-    font-family: 'Roboto';
-    font-size: 2.7vh;
-    margin: 0;
-    font-weight: 100;
-    text-align: right;
-    color: black;
-    text-decoration: none;
-    padding: 1.5vh 2vw 3vh 4vw;
-  }
+.icon {
+  padding: 10px;
+  color: #181818;
+  min-width: 50px;
+  text-align: left;
+}
 
-  .friendDiv{
-    width: 100%;
-    height: auto;
-    text-align: left;
-    display: inline-flex;
-    overflow: hidden;
-/*    padding-bottom: 3vh;*/
-    font-size: 2.7vh;
-  }
+.editIcon {
+  left: auto;
+  right: 0vw;
+}
 
-    .createForm {
-        position: absolute;
-        left: 10%;
-        width: 80%;
-        top: 15%;
-        height: 80%;
-    }
+.input-field {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+}
 
-    #autoFill {
-        margin-bottom: -5vh;
-        border: 1px solid lightgrey;
-        height: auto;
-        color: lightgray;
-        text-align: left;
-        padding: 1vh;
-        display: none;
-        overflow: scroll;
-        cursor: pointer;
+#signOut {
+  width: 90%;
+  height: 6vh;
+  border: none;
+  outline: none;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2vh;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  text-decoration: none;
+  background: #FFD540;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
 
-    }
+#addFriend {
+  margin-top: -2.5vh;
+  padding: .8vh 12vw;
+  font-size: 2.5vh;
+  font: "Roboto";
+  outline: none;
+  border: 2px solid #ffbd00;
+  border-radius: 3vw;
+  background: white;
+  color: #ffbd00;
+  text-decoration: none;
+}
 
-    .exist-friends{
-      list-style: none;
-      margin: 0 0 0 0;
-      padding: 0 0 0 0;
-    }
+.friendPhoto {
+  margin-left: 6vw;
+  height: 7vh;
+  width: 7vh;
+  border-radius: 50%;
+}
 
-    .existFriend {
-      padding: 2vh 4vw 2vh 4vw;
-      margin: 0 0 0 0;
-      color: black;
-      cursor: pointer;
-      text-align: left;
-    }
+.friendText {
+  font-family: "Roboto";
+  font-size: 3vh;
+  margin: 0;
+  text-align: right;
+  color: black;
+  text-decoration: none;
+  padding: 1.5vh 2vw 3vh 4vw;
+}
 
-    #createFinish {
-      background-color: #B0B0B0;
-      border: 1px solid #B0B0B0;
-      color: #000000;
-      padding: 1.5vh 0;
-      text-align: center;
-    }
+.friendDiv {
+  width: 100%;
+  height: auto;
+  text-align: left;
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: 2vh;
+  font-size: 2.7vh;
+}
 
-    .createForm input {
-        width: 100%;
-        padding: 1vh;
-        border: 1px solid #E0E0E0;
-/*      padding: 1.5vh 25vh 2vh 2vh;*/
-      text-align: left;
-      font-size: 3vh;
-      margin-top: 1vh;
-      width: 80vw;
-      background-color: #E0E0E0;
-    }
+.friendClickIcon {
+  width: 5vw; 
+  height: auto; 
+  margin-right: 9%; 
+  margin-top: 1.3vh;
+  float: right;
+  opacity: .25;
+}
+
+.createForm {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  top: 15%;
+  height: 80%;
+}
+
+#autoFill {
+  margin-bottom: -5vh;
+/*  border: 1px solid lightgrey;*/
+  height: auto;
+  color: lightgray;
+  text-align: left;
+  padding: 1vh;
+  display: none;
+  overflow: scroll;
+  cursor: pointer;
+}
+
+.exist-friends {
+  font-size: 2.5vh;
+  list-style: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.existFriend {
+  padding: 2vh 4vw 2vh 4vw;
+  margin: 0 0 0 0;
+  color: black;
+  cursor: pointer;
+  text-align: left;
+  background: white;
+  border: none;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+#createFinish {
+  background-color: #ffdd00;
+  color: #000000;
+  padding: 1.2vh 0;
+  text-align: center;
+  font-size: 3.5vh;
+}
+
+.createForm input {
+  width: 100%;
+  padding: 1vh;
+  border: 1px solid #ffdd00;
+  /*      padding: 1.5vh 25vh 2vh 2vh;*/
+  text-align: left;
+  font-size: 3vh;
+  margin-top: 1vh;
+  width: 80vw;
+  background-color: white;
+}
+
+::placeholder {
+  color: lightgray;
+}
 
 .allNotis {
-    position: absolute;
-    left: 8vw;
-    top: 9vh;
-    width: 84vw;
-    height: auto;
+  position: absolute;
+  left: 8vw;
+  top: 9vh;
+  width: 84vw;
+  height: auto;
 }
 
 .notiCard {
-    display: block;
-    position: relative;
-    margin-left: 5vw;
-    margin-bottom: 4vh;
-    width: 72vw;
-    height: 17vh;
-    padding: 3vw 6vw;
-    background: #f1f1f1;
-    text-align: left;
-    font-size: 2.7vh;
+  display: block;
+  position: relative;
+  margin-left: 6vw;
+  margin-bottom: 4vh;
+  width: 72vw;
+  height: 17vh;
+  padding: 3vw 6vw;
+  background: #fff8c9;
+  text-align: left;
+  font-size: 2.7vh;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 .notiUser {
-    position: absolute;
-    left: 5%;
-    width: 15vw;
-    height: 15vw;
-    border-radius: 50%;
+  position: absolute;
+  left: 5%;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
 }
 
 .notiContent {
-    position: absolute;
-    left: 23vw;
-    margin-top: 0vw;
-    font-weight: bold;
+  position: absolute;
+  left: 23vw;
+  margin-top: 0vw;
+  font-weight: bold;
 }
 
 .notiAction1 {
-    position: absolute;
-    width: auto;
-    bottom: 3vh;
-    left: 4vw;
-    padding: .5vw 2.5vw;
-    border: 1px solid gray;
-    border-radius: 6vw;
+  position: absolute;
+  width: auto;
+  bottom: 3vh;
+  left: 4vw;
+  padding: 0.5vw 2.5vw;
+  border: 1px solid gray;
+  border-radius: 6vw;
 }
 
 .notiAction2 {
-    position: absolute;
-    bottom: 3vh;
-    right: 4vw;
-    padding: .5vw 2.5vw;
-    background: gray;
-    color: white;
-    border: 1px solid gray;
-    border-radius: 6vw;
+  position: absolute;
+  bottom: 3vh;
+  right: 4vw;
+  padding: 0.5vw 2.5vw;
+  background: #ffdd00;
+  color: white;
+  border: 1px solid #ffdd00;
+  border-radius: 6vw;
 }
 
 .searchBar {
   display: inline-block;
-  width: 75%;
+  width: 70%;
   height: 5vh;
-  background: #E5E5E5;
-  border:none;
+/*  background: #e5e5e5;*/
+  border: 1px solid #ffdd00;
   overflow: hidden;
   padding-left: 2%;
+  margin-left: 4vw;
   outline: none;
+  font-size: 2.5vh;
+  margin-top: -1vh;
 }
 
 .hiddenFriend {
@@ -461,13 +587,14 @@
   width: 100%;
   height: auto;
   display: inline-flex;
-  padding-bottom: .5vh;
+  padding-bottom: 0.5vh;
   font-size: 2.7vh;
 }
 
 .friendLabel {
   text-align: left;
   padding-left: 2%;
+  font-size: 2.5vh;
 }
 
 #friendCancel {
@@ -477,17 +604,17 @@
   border: none;
   overflow: hidden;
   height: 5vh;
-  color: #000000;
+  color: darkgray;
   text-align: center;
   font-family: Roboto;
   font-weight: bold;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 2.2vh;
   padding-left: 10px;
 }
 
 .addIcon {
-/*  padding: 1.5vh 10vw 1.5vh 0;*/
+  /*  padding: 1.5vh 10vw 1.5vh 0;*/
   width: 10%;
   height: 3.5vh;
   float: right;

@@ -20,6 +20,7 @@
     crossorigin="anonymous"></script>
 
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,800&display=swap" rel="stylesheet">
 
   <!-- CSS STYLESHEET -->
   <link rel="stylesheet" href="../css/letter.css">
@@ -32,7 +33,7 @@
     <div class="col-md">
       <h1 id="name">{{weeth}}</h1>
       <h2 id="eventDate">{{date}}</h2>
-      <h2 id="eventName">{{title}} @ {{location}}</h2>
+      <h2 id="eventName">{{title}} at {{location}}</h2>
     </div>
   </div>
 
@@ -50,41 +51,37 @@
     </div>
   </div>
 
-
   <div>
-    <div class="receiveButton" onclick="receiveClick()">Receive</div>
+    <div class="receiveButton" onclick="receiveClick()">Received</div>
     <div class="writeButton activate" onclick="writeClick()">Write</div>
   </div>
 
   <div id="receiveDiv" style="display: none;">
     {{#if hasReceived}}
-        <p class="receiveMsg">{{receive}}</p>
+    <p class="receiveMsg">{{receive}}</p>
     {{else}}
-        <p class="receiveMsg">Waiting for this user to write back!</p>
-    {{/if}}  
+    <p class="receiveMsg">Waiting for this user to write back!</p>
+    {{/if}}
   </div>
 
   <div id="writeDiv">
     {{#if hasWritten}}
-        {{#each messages}}
-        <p>{{this}}</p>
-<!--        <br />-->
-        {{/each}}
+    {{#each messages}}
+    <p>{{this}}</p>
+    <!--        <br />-->
+    {{/each}}
     {{else}}
-<!--    <form role="form" method="post" action="/letter/{{id}}">-->
+    <!--    <form role="form" method="post" action="/letter/{{id}}">-->
     <form role="form" method="post">
-      <p style="margin: 0;">Choose one or more!</p>
-      <input type="text" class="writeMsgOne inputWrite" placeholder="Thank you for..." name="thankyou">
-      <input type="text" class="writeMsgTwo inputWrite" placeholder="I just learned that you..." name="learn">
-      <input type="text" class="writeMsgThree inputWrite" placeholder="I wish I could’ve had... (for you)" name="wish">
-      <input type="text" class="writeMsgFour inputWrite" placeholder="Anything else..." name="anything">
+      <p style="margin: 0; color: black; font-family: Roboto;">Choose one or more to write!</p>
+      <input type="text" placeholder="Thank you for..." name="thankyou">
+      <input type="text" placeholder="I just learned that you..." name="learn">
+      <input type="text" placeholder="I wish I could’ve had... (for you)" name="wish">
+      <input type="text" placeholder="Anything else..." name="anything">
       <input type="submit" id="sendButton" value="Send">
     </form>
     {{/if}}
   </div>
-
-
-
 
 </body>
 
