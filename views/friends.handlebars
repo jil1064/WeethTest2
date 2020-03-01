@@ -2,7 +2,22 @@
 <html>
 
 <head>
-   {{> header}}
+  {{> header}}
+
+  <!-- Google Analytics -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-159398674-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- End Google Analytics 
+
 </head>
 
 <body>
@@ -10,9 +25,9 @@
   <div id="navBar" class="bar">
     <p style="margin-top: 1.25vh; font-size: 4.5vh;">Friends</p>
     <!--        <img id="back" onclick="goBack()" src="../img/back.png">-->
-    <a href="/home">
-      <!--        <img id="homeButton" src="../img/homeButton.png" text-align="center" />-->
-    </a>
+  <a href="/home">
+    <!--        <img id="homeButton" src="../img/homeButton.png" text-align="center" />-->
+  </a>
   </div>
 
   <div id="botBar" class="bar fixed-nav-bar">
@@ -20,12 +35,12 @@
     <img id="home" onclick="window.location.href='/homeB'" src="../img/home.png" style="filter: grayscale(100%);">
     <img id="noti" onclick="window.location.href='/notificationB'" src="../img/noti.png" style="filter: grayscale(100%);">
     <img id="friends" onclick="window.location.href='/friendsB'" src="../img/friends.png">
-    <img id="createEveB" onclick="window.location.href='/createB'" src="../img/createEventButton.png">
+    <img class="createBtn" id="createEveB" onclick="window.location.href='/createB'" src="../img/createEventButton.png">
     {{else}}
     <img id="home" onclick="window.location.href='/home'" src="../img/home.png" style="filter: grayscale(100%);">
     <img id="noti" onclick="window.location.href='/notification'" src="../img/noti.png" style="filter: grayscale(100%);">
     <img id="friends" onclick="window.location.href='/friends'" src="../img/friends.png">
-    <img id="createEveA" onclick="window.location.href='/create'" src="../img/createA.png" style="filter: grayscale(100%);">
+    <img class="createBtn" id="createEveA" onclick="window.location.href='/create'" src="../img/createA.png" style="filter: grayscale(100%);">
     {{/if}}
   </div>
 
@@ -79,6 +94,6 @@
   </div>
   {{/each}}
   {{/if}}
-</body>
+  </body>
 
 </html>

@@ -2,7 +2,21 @@
 <html>
 
 <head>
-   {{> header}}
+  {{> header}}
+
+  <!-- Google Analytics -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-159398674-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- End Google Analytics -->
 </head>
 
 <body>
@@ -19,12 +33,12 @@
     <img id="home" onclick="window.location.href='/home'" src="../img/home.png" style="filter: grayscale(100%);">
     <img id="noti" onclick="window.location.href='/notification'" src="../img/noti.png" style="filter: grayscale(100%);">
     <img id="friends" onclick="window.location.href='/friendsB'" src="../img/friends.png" style="filter: grayscale(100%);">
-    <img id="createEveB" onclick="window.location.href='/createB'" src="../img/createEventButton.png">
+    <img class="createBtn" id="createEveB" onclick="window.location.href='/createB'" src="../img/createEventButton.png">
     {{else}}
     <img id="home" onclick="window.location.href='/home'" src="../img/home.png" style="filter: grayscale(100%);">
     <img id="noti" onclick="window.location.href='/notification'" src="../img/noti.png" style="filter: grayscale(100%);">
     <img id="friends" onclick="window.location.href='/friends'" src="../img/friends.png" style="filter: grayscale(100%);">
-    <img id="createEveA" onclick="window.location.href='/create'" src="../img/createA.png" style="filter: grayscale(100%);">
+    <img class="createBtn" id="createEveA" onclick="window.location.href='/create'" src="../img/createA.png" style="filter: grayscale(100%);">
     {{/if}}
   </div>
 

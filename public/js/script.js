@@ -26,6 +26,14 @@ function initializePage() {
   $(".addFriendButton").click(addFriendIcon);
   $(".existFriend").click(chooseFriend);
   $("#saveChanges").click(saveChanges);
+
+  // Google Analytics
+  $(".createBtn").click(clickCreateEvent);
+
+  function clickCreateEvent(e) {
+    e.preventDefault();
+    ga("send", "event", "createEvent", "click");
+  }
 }
 
 function goBack() {
@@ -153,10 +161,10 @@ function deleteEvent() {
     data: { id: id }
   });
   if (version == "B") {
-    window.location.href = "/homeB";  
-  }else{
-    window.location.href = "/home";  
-  } 
+    window.location.href = "/homeB";
+  } else {
+    window.location.href = "/home";
+  }
 }
 
 //function deleteEventB() {
