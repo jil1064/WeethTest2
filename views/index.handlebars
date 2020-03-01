@@ -20,27 +20,28 @@
 
 <body>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
-    <br>
-    <img src="/img/weethLogo.png" class="weethLogo">
+
+    <img src="/img/weethLogo.png" class="weethLogo" style="margin-top:1vh;">
     <p class="appTitle">weeth<p>
     
-    <div style="width: 90%; margin: 0 0 0 0; display: inline-block; padding-bottom: 4vh;">
-        <input type="text" id="username" placeholder="Username" name="uname">
+    <form class="divStyle">
+        <input type="text" id="loginUsername" placeholder="Username" name="uname" class="loginInput" autocomplete="off">
+        <input type="password" id="loginPassword" placeholder="Enter Password" name="psw" class="loginInput" autocomplete="off">
+        <p class="forgotPassword">Forgot Password?</p>
+    </form>
+    <div class="divStyle">
+        <a type="submit" id="loginButton" href="home">Login</a>
     </div>
-    <div style="width: 90%; margin: 0 0 0 0; display: inline-block; padding-bottom: 4vh;">
-        <input type="password" id="password" placeholder="Enter Password" name="psw">
-        <p style="float: right; padding: 2vh 0 2vh 0; margin: 0 0 0 0; color: white;">Forgot Password?</p>
+    <div class="divStyle" style="padding-bottom: 4vh;">
+        <a href="/home"  data-auto-logout-link="false" onclick="checkLoginState()" class="facebookLogin" autocomplete="off">
+            <img src="img/facebookLogo.png"  class="facebookLogo"> Sign up with Facebook
+        </a>
     </div>
 
-    <a type="submit" id="loginButton" href="home">Login</a><br><br><br>
-    
-    <a href="/home" class="fb-login-button" data-button-type="login_with" data-auto-logout-link="false" onclick="checkLoginState()">
-        <img src="img/facebookLogin.png" width="90%" height="auto">
-    </a><br><br><br>
     {{!-- <div class="fb-login-button" data-width="80" data-size="large" data-button-type="login_with" data-auto-logout-link="false"
      onlogin="checkLoginState();" data-use-continue-as="false" onclick="window.location.href='/home';"></div> --}}
-    <a class="homeSignUpText" href="signup">Sign up an account</a>
 
+    <a class="indexSignUp" href="/signup">Sign up an account</a>
 </body>
 
 </html>

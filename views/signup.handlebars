@@ -19,26 +19,19 @@
 </head>
 
 <body>
-    <br>
-    <img src="/img/weethLogo.png" class="weethLogo">
+    <img src="/img/weethLogo.png" class="weethLogo" style="margin-top:1vh;">
     <p class="appTitle">weeth<p>
     
-    <div style="padding: 0 0vw 0 0vw; width: 100%; margin: 0 0 0 0; padding-bottom: 3%;">
-        <div style="width: 90%; margin: 0 0 0 0; display: inline-block; padding-bottom: 2vh;">
-            <input type="text" id="username" placeholder="Username" name="uname">
-        </div>
-        <div style="width: 90%; margin: 0 0 0 0; display: inline-block; padding-bottom: 2vh;">
-            <input type="email" id="email" placeholder="Email" name="email">
-        </div>
-        <div style="width: 90%; margin: 0 0 0 0; display: inline-block; padding-bottom: 2vh;">
-            <input type="password" id="password" placeholder="Password" name="psw">
-        </div>
-        <div style="width: 90%; margin: 0 0 0 0; display: inline-block; padding-bottom: 2vh;">
-            <input type="password" id="password" placeholder="Confirm Password" name="psw">
-        </div>
+    <form class="divStyle">
+        <input type="text" id="username" class="signUpInput" placeholder="Username" name="uname" autocomplete="off">
+        <input type="email" id="email" class="signUpInput" placeholder="Email" name="email" autocomplete="on">
+        <input type="password" id="password" class="signUpInput" placeholder="Password" name="psw" autocomplete="off">
+        <input type="password" id="confirmPassword" class="signUpInput" placeholder="Confirm Password" name="psw" autocomplete="off">
+    </form>
+
+    <div style="padding: 2vh 5% 3vh 5%; width: 90%;">
+        <a type="submit" id="createAccount" href="home">Sign Up</a>
     </div>
-    <br><br>
-    <a type="submit" id="createAccount" href="home">Sign Up</a>
 
 </body>
 

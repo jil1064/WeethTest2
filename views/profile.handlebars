@@ -18,38 +18,30 @@
 
 <body>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
-  <img id="back" onclick="goBack()" src="img/back.png">
-  <div id="navBar" class="bar" style="height: 22vh; background: linear-gradient(360deg, #FFCA10 -6.05%, rgba(255, 202, 16, 0.8) 37.58%); z-index: -1;">
-    {{!-- <p style="margin-top: 1.75vh; font-size: 4.5vh;">Profile</p> --}}
-  </div>
-
-
-  <img id="userPhoto" src="{{user.userPhoto}}" draggable="false">
+  <img id="back" onclick="goBack();" src="img/back.png">
+  <div id="navBar" class="bar profileBar"></div>
+  <img id="userPhoto" src="{{user.userPhoto}}">
   <p id="profileName">{{user.name}}</p>
-  <br>
 
-  <form>
+  <form style="width: 90%; padding: 3% 5% 3% 5%; margin: 0;">
     <div display="block" class="input-icons">
-      <i class="fa fa-user icon" style="padding: 2vh 0 0 4vw; color: rgba(29, 29, 29, 0.95);"></i>
-      {{!-- <i class="fa fa-pencil icon editIcon"></i> --}}
+      <i class="fa fa-user icon"></i>
       <input id="profileNameTwo" class="profileText" onClick="this.select();" type="text" value="{{user.name}}"></input>
     </div>
 
     <div display="block" class="input-icons">
-      <i class="fa fa-envelope icon" style="padding: 2vh 0 0 4vw; color: rgba(29, 29, 29, 0.95);"></i>
-      {{!-- <i class="fa fa-pencil icon editIcon"></i> --}}
+      <i class="fa fa-envelope icon"></i>
       <input id="profileEmail" class="profileText" onClick="this.select();" type="text" value="{{user.email}}"></input>
     </div>
 
     <div display="block" class="input-icons">
-      <i class="fa fa-key icon" style="padding: 2vh 0 0 4vw; color: rgba(29, 29, 29, 0.95);"></i>
-      {{!-- <i class="fa fa-pencil icon editIcon"></i> --}}
+      <i class="fa fa-key icon"></i>
       <input id="profilePassword" class="profileText" onClick="this.select();" type="password" value="{{user.password}}"></input>
     </div>
   </form>
-  <br>
+  
   <button id="saveChanges">Save Changes</button>
-  <br><br><br>
+  <br><br>
   <button id="signOut" onclick="window.location.href='/';">Sign Out</button>
 </body>
 
