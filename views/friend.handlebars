@@ -2,6 +2,8 @@
 <html>
 
 <head>
+
+  {{!--
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159398674-1"></script>
   <script>
@@ -10,9 +12,11 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-159398674-1', { 'optimize_id': 'GTM-KZDHDMT' });
-  </script>
+  </script> --}}
+
   {{> header}}
 
+  {{!--
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159398674-1"></script>
   <script>
@@ -21,7 +25,7 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-159398674-1', { 'optimize_id': 'GTM-KZDHDMT' });
-  </script>
+  </script> --}}
 
   <!-- Google Analytics -->
   <script>
@@ -48,19 +52,6 @@
     </a>-->
   </div>
 
-  <div id="botBar" class="bar fixed-nav-bar">
-    {{#if viewB}}
-    <img id="home" onclick="window.location.href='/home'" src="../img/home.png" style="filter: grayscale(100%);">
-    <img id="noti" onclick="window.location.href='/notification'" src="../img/noti.png" style="filter: grayscale(100%);">
-    <img id="friends" onclick="window.location.href='/friendsB'" src="../img/friends.png" style="filter: grayscale(100%);">
-    <img class="createBtn" id="createEveB" onclick="window.location.href='/createB'" src="../img/createEventButton.png">
-    {{else}}
-    <img id="home" onclick="window.location.href='/home'" src="../img/home.png" style="filter: grayscale(100%);">
-    <img id="noti" onclick="window.location.href='/notification'" src="../img/noti.png" style="filter: grayscale(100%);">
-    <img id="friends" onclick="window.location.href='/friends'" src="../img/friends.png" style="filter: grayscale(100%);">
-    <img class="createBtn" id="createEveA" onclick="window.location.href='/create'" src="../img/createA.png" style="filter: grayscale(100%);">
-    {{/if}}
-  </div>
 
   {{#if activities}}
   <br>
