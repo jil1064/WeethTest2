@@ -28,11 +28,19 @@ function initializePage() {
   $("#saveChanges").click(saveChanges);
 
   // Google Analytics
-  $(".createBtn").click(clickCreateEventA);
+  $(".createBtnA").click(clickCreateEventA);
 
   function clickCreateEventA(e) {
     e.preventDefault();
     ga("send", "event", "createEventA", "click");
+    ga("send", "event", "createEvent", "click");
+  }
+
+  $(".createBtnB").click(clickCreateEventB);
+
+  function clickCreateEventB(e) {
+    e.preventDefault();
+    ga("send", "event", "createEventB", "click");
     ga("send", "event", "createEvent", "click");
   }
 }
